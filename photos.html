@@ -4,6 +4,15 @@ title: 活動照片
 permalink: /photos/
 ---
 
+<!-- 檢查是否有真實照片內容 -->
+{% assign has_photos = false %}
+{% for photo in site.photos %}
+    {% if photo.image and photo.image != "" %}
+        {% assign has_photos = true %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+
 <!-- 頁面標題 -->
 <section class="news-section">
     <div class="section-container">
@@ -15,8 +24,11 @@ permalink: /photos/
             本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
         </p>
         
-        <!-- 主要照片展示區域 - 當有照片時才顯示 -->
-        {% if site.photos.size > 0 %}
+        <!-- 調試信息 -->
+        <!-- 照片數量: {{ site.photos.size }} -->
+        
+        <!-- 主要照片展示區域 - 完全隱藏直到有真實照片 -->
+        {% if has_photos %}
         <div style="text-align: center; margin-bottom: 4rem;">
             <div style="width: 100%; height: 400px; background-color: #ddd; border-radius: 15px; position: relative; overflow: hidden;">
                 <!-- 輪播控制按鈕 -->
@@ -69,13 +81,13 @@ permalink: /photos/
             {% endfor %}
             
             <!-- 如果沒有照片，顯示提示信息 -->
-            {% if site.photos.size == 0 %}
+            {% unless has_photos %}
             <div style="text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
                 <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📸</div>
                 <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有活動照片</h3>
                 <p style="line-height: 1.6;">精彩的活動照片即將上線，敬請期待！</p>
             </div>
-            {% endif %}
+            {% endunless %}
         </div>
     </div>
 </section> 
