@@ -1,0 +1,56 @@
+title: 新北市雙語策略聯盟
+description: NEW TAIPEI CITY BILINGUAL STRATEGIC ALLIANCE
+baseurl: "/ntpc.bsa1"
+url: "https://yourusername.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  lessons:
+    output: true
+    permalink: /:collection/:name/
+  photos:
+    output: true
+    permalink: /:collection/:name/
+  vr:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "lessons"
+    values:
+      layout: "lesson"
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: "photo"
+  - scope:
+      path: ""
+      type: "vr"
+    values:
+      layout: "vr"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/ 

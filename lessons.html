@@ -1,0 +1,89 @@
+---
+layout: default
+title: 教案分享
+---
+
+<!-- 頁面標題 -->
+<section class="news-section">
+    <div class="section-container">
+        <div class="section-title">
+            <h1>教案分享 <span class="title-en">LESSON PLAN</span></h1>
+        </div>
+        
+        <p style="margin-bottom: 3rem; color: #666; line-height: 1.8;">
+            本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
+        </p>
+        
+        <!-- 教案網格 -->
+        <div class="lesson-grid">
+            {% for lesson in site.lessons %}
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">分類</div>
+                    <h3 class="lesson-title">{{ lesson.title | default: "教案標題教案標題教案標題教案標題教案標題" }}</h3>
+                    <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。" }}</p>
+                </div>
+            </article>
+            {% endfor %}
+            
+            <!-- 如果沒有教案，顯示示例內容 -->
+            {% if site.lessons.size == 0 %}
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">分類</div>
+                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
+                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
+                </div>
+            </article>
+            
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">分類</div>
+                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
+                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
+                </div>
+            </article>
+            
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">分類</div>
+                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
+                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
+                </div>
+            </article>
+            
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">分類</div>
+                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
+                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
+                </div>
+            </article>
+            {% endif %}
+        </div>
+        
+        <!-- 分頁 -->
+        <nav class="pagination">
+            <a href="#" data-page="prev">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                </svg>
+            </a>
+            <span class="current">1</span>
+            <a href="#" data-page="2">2</a>
+            <a href="#" data-page="3">3</a>
+            <a href="#" data-page="4">4</a>
+            <a href="#" data-page="5">5</a>
+            <a href="#" data-page="next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+            </a>
+        </nav>
+    </div>
+</section> 

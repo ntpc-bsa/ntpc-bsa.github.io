@@ -1,0 +1,114 @@
+---
+layout: default
+title: 活動照片
+---
+
+<!-- 頁面標題 -->
+<section class="news-section">
+    <div class="section-container">
+        <div class="section-title">
+            <h1>活動照片 <span class="title-en">PHOTO</span></h1>
+        </div>
+        
+        <p style="margin-bottom: 3rem; color: #666; line-height: 1.8;">
+            本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
+        </p>
+        
+        <!-- 主要照片展示 -->
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <div style="width: 100%; height: 400px; background-color: #ddd; border-radius: 15px; position: relative; overflow: hidden;">
+                <!-- 輪播控制按鈕 -->
+                <button style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                    </svg>
+                </button>
+                <button style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                    </svg>
+                </button>
+                
+                <!-- 輪播指示器 -->
+                <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 1;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 精選相簿區塊 -->
+<section class="news-section">
+    <div class="section-container">
+        <div class="section-title">
+            <h2>精選相簿 <span class="title-en">PHOTO</span></h2>
+            <button class="more-info-btn">MORE INFO</button>
+        </div>
+        
+        <!-- 照片網格 -->
+        <div class="photo-gallery">
+            {% for photo in site.photos %}
+            <article class="photo-item">
+                {% if photo.image %}
+                    <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
+                {% else %}
+                    <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                {% endif %}
+                <div class="photo-info">
+                    <h3 class="photo-title">{{ photo.title | default: "新北市國中雙語策略聯盟成果展" }}</h3>
+                </div>
+            </article>
+            {% endfor %}
+            
+            <!-- 如果沒有照片，顯示示例內容 -->
+            {% if site.photos.size == 0 %}
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            
+            <article class="photo-item">
+                <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
+                <div class="photo-info">
+                    <h3 class="photo-title">新北市國中雙語策略聯盟成果展</h3>
+                </div>
+            </article>
+            {% endif %}
+        </div>
+    </div>
+</section> 
