@@ -1,7 +1,7 @@
 title: 新北市雙語策略聯盟
 description: NEW TAIPEI CITY BILINGUAL STRATEGIC ALLIANCE
 baseurl: "/ntpc.bsa1"
-url: "https://yourusername.github.io"
+url: "https://ntpc-bsa.github.io"
 
 # Build settings
 markdown: kramdown
