@@ -3,6 +3,33 @@ layout: default
 title: 首頁
 ---
 
+<!-- 檢查各類內容是否存在 -->
+{% assign has_lessons = false %}
+{% assign has_photos = false %}
+{% assign has_vr = false %}
+{% assign total_content = 0 %}
+
+{% for lesson in site.lessons %}
+    {% if lesson.title and lesson.title != "" %}
+        {% assign has_lessons = true %}
+        {% assign total_content = total_content | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+{% for photo in site.photos %}
+    {% if photo.title and photo.title != "" %}
+        {% assign has_photos = true %}
+        {% assign total_content = total_content | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+{% for vr in site.vr %}
+    {% if vr.title and vr.title != "" %}
+        {% assign has_vr = true %}
+        {% assign total_content = total_content | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
 <!-- 英雄區域 -->
 <section class="hero-section">
     <div class="hero-content">
@@ -27,38 +54,80 @@ title: 首頁
             <button class="more-info-btn">MORE INFO</button>
         </div>
         
+        {% if total_content > 0 %}
         <div class="news-grid">
-            <!-- 示例新聞項目 -->
+            <!-- 教案分享內容 -->
+            {% for lesson in site.lessons limit:1 %}
+            {% if lesson.title and lesson.title != "" %}
             <article class="news-item">
                 <div class="news-image">
-                    <div class="news-date">2024-04-15</div>
+                    <div class="news-date">{{ lesson.date | date: "%Y-%m-%d" | default: "2024-01-01" }}</div>
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">新北市國中雙語策略聯盟成果展</h3>
-                    <p class="news-excerpt">透過今年的成果展，各校師生認真學習，實現雙語教學與學習的目標，並分享教學成果，促進學習交流與合作。</p>
+                    <h3 class="news-title">{{ lesson.title }}</h3>
+                    <p class="news-excerpt">{{ lesson.excerpt | strip_html | truncate: 80 | default: "新的教案分享內容已上線，歡迎查看。" }}</p>
                 </div>
             </article>
+            {% endif %}
+            {% endfor %}
             
+            <!-- 活動照片內容 -->
+            {% for photo in site.photos limit:1 %}
+            {% if photo.title and photo.title != "" %}
             <article class="news-item">
                 <div class="news-image">
-                    <div class="news-date">2024-04-10</div>
+                    <div class="news-date">{{ photo.date | date: "%Y-%m-%d" | default: "2024-01-01" }}</div>
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">新北市國中雙語策略聯盟成果展</h3>
-                    <p class="news-excerpt">透過今年的成果展，各校師生認真學習，實現雙語教學與學習的目標，並分享教學成果，促進學習交流與合作。</p>
+                    <h3 class="news-title">{{ photo.title }}</h3>
+                    <p class="news-excerpt">{{ photo.excerpt | strip_html | truncate: 80 | default: "精彩的活動照片已更新，快來瀏覽。" }}</p>
                 </div>
             </article>
+            {% endif %}
+            {% endfor %}
             
+            <!-- VR科技內容 -->
+            {% for vr in site.vr limit:1 %}
+            {% if vr.title and vr.title != "" %}
             <article class="news-item">
                 <div class="news-image">
-                    <div class="news-date">2024-04-05</div>
+                    <div class="news-date">{{ vr.date | date: "%Y-%m-%d" | default: "2024-01-01" }}</div>
                 </div>
                 <div class="news-content">
-                    <h3 class="news-title">新北市國中雙語策略聯盟成果展</h3>
-                    <p class="news-excerpt">透過今年的成果展，各校師生認真學習，實現雙語教學與學習的目標，並分享教學成果，促進學習交流與合作。</p>
+                    <h3 class="news-title">{{ vr.title }}</h3>
+                    <p class="news-excerpt">{{ vr.excerpt | strip_html | truncate: 80 | default: "創新的VR科技教學內容已發佈。" }}</p>
                 </div>
             </article>
+            {% endif %}
+            {% endfor %}
+            
+            <!-- 如果內容不足3個，填充預設項目 -->
+            {% assign content_count = 0 %}
+            {% if has_lessons %}{% assign content_count = content_count | plus: 1 %}{% endif %}
+            {% if has_photos %}{% assign content_count = content_count | plus: 1 %}{% endif %}
+            {% if has_vr %}{% assign content_count = content_count | plus: 1 %}{% endif %}
+            
+            {% assign remaining = 3 | minus: content_count %}
+            {% for i in (1..remaining) %}
+            <article class="news-item">
+                <div class="news-image">
+                    <div class="news-date">{{ "now" | date: "%Y-%m-%d" }}</div>
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">更多精彩內容即將推出</h3>
+                    <p class="news-excerpt">我們正在準備更多優質的雙語教學資源，敬請期待。</p>
+                </div>
+            </article>
+            {% endfor %}
         </div>
+        {% else %}
+        <!-- 沒有內容時的提示 -->
+        <div style="text-align: center; padding: 4rem 2rem; color: #666;">
+            <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📢</div>
+            <h3 style="margin-bottom: 1rem; color: #333;">內容準備中</h3>
+            <p style="line-height: 1.6; max-width: 500px; margin: 0 auto;">我們正在努力準備教案分享、活動照片和VR科技等精彩內容，敬請期待！</p>
+        </div>
+        {% endif %}
     </div>
 </section>
 
@@ -69,15 +138,42 @@ title: 首頁
             <h2>焦點新聞 <span class="title-en">NEWS</span></h2>
         </div>
         
+        {% if total_content > 0 %}
+        <!-- 有內容時輪播顯示 -->
         <div class="featured-news">
             <div class="featured-image"></div>
             <div class="featured-content">
-                <h3 class="featured-title">新北市國中雙語策略聯盟成果展</h3>
-                <p class="featured-text">
-                    透過實際的跨領域策劃，雙語合作學習，實學現教場地，並且配合師生共同參與學習活動，以期培養學生雙語能力，提升英語學習效能，並建立新的雙語教學學習教育系統，以落實推廣雙語學習之參考依據。
-                </p>
+                {% if has_lessons %}
+                    {% assign featured_item = site.lessons.first %}
+                    <h3 class="featured-title">{{ featured_item.title | default: "教案分享內容" }}</h3>
+                    <p class="featured-text">
+                        {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過創新的教案設計，結合雙語教學策略，我們致力於為學生創造更豐富的學習體驗，提升英語學習效能，並建立新的雙語教學學習教育系統。" }}
+                    </p>
+                {% elsif has_photos %}
+                    {% assign featured_item = site.photos.first %}
+                    <h3 class="featured-title">{{ featured_item.title | default: "活動照片分享" }}</h3>
+                    <p class="featured-text">
+                        {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過豐富的活動照片記錄，展現我們在雙語教學上的成果與師生的學習歷程，分享教學經驗與學習成果，促進學習交流與合作。" }}
+                    </p>
+                {% elsif has_vr %}
+                    {% assign featured_item = site.vr.first %}
+                    <h3 class="featured-title">{{ featured_item.title | default: "VR科技教學" }}</h3>
+                    <p class="featured-text">
+                        {{ featured_item.excerpt | strip_html | truncate: 200 | default: "運用最新的VR虛擬實境技術，為學生打造沉浸式的學習環境，結合雙語教學，創造創新的教學模式，提升學習效果。" }}
+                    </p>
+                {% endif %}
                 <button class="featured-btn">MORE INFO</button>
             </div>
         </div>
+        {% else %}
+        <!-- 沒有內容時的提示 -->
+        <div style="text-align: center; padding: 4rem 2rem; color: #666;">
+            <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">🌟</div>
+            <h3 style="margin-bottom: 1rem; color: #333;">焦點內容準備中</h3>
+            <p style="line-height: 1.6; max-width: 600px; margin: 0 auto;">
+                我們正在精心策劃更多精彩的焦點內容，包括創新教案、活動記錄和VR科技應用等，為您帶來更豐富的雙語教學體驗。
+            </p>
+        </div>
+        {% endif %}
     </div>
 </section>
