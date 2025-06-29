@@ -28,43 +28,13 @@ permalink: /lessons/
             </article>
             {% endfor %}
             
-            <!-- 如果沒有教案，顯示示例內容 -->
+            <!-- 如果沒有教案，顯示提示信息 -->
             {% if site.lessons.size == 0 %}
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">分類</div>
-                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
-                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
-                </div>
-            </article>
-            
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">分類</div>
-                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
-                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
-                </div>
-            </article>
-            
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">分類</div>
-                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
-                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
-                </div>
-            </article>
-            
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">分類</div>
-                    <h3 class="lesson-title">教案標題教案標題教案標題教案標題教案標題</h3>
-                    <p class="lesson-description">透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。</p>
-                </div>
-            </article>
+            <div style="text-align: center; padding: 4rem 2rem; color: #666;">
+                <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📚</div>
+                <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有教案內容</h3>
+                <p style="line-height: 1.6;">我們正在努力準備優質的教案資源，敬請期待！</p>
+            </div>
             {% endif %}
         </div>
         
