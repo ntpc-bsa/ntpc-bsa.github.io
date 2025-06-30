@@ -1331,31 +1331,46 @@ body {
         font-size: 0.85rem;
     }
     
-    /* 聯絡頁面優化 */
+    /* 聯絡頁面優化 - 針對Pixel 6 Pro等手機設備 */
     .contact-title {
         font-size: 2.5rem;
+        text-align: left;
+        line-height: 1.1;
     }
     
     .contact-hero-content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 1rem;
     }
     
     .contact-main-content {
-        text-align: center;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .contact-icon {
+        margin-bottom: 1rem;
     }
     
     .contact-org-header {
-        text-align: center;
+        text-align: left;
+        margin-top: 1.5rem;
+        border-bottom: 2px solid var(--text-dark);
+        padding-bottom: 1rem;
     }
     
     .org-main-title {
         font-size: 1.5rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
     }
     
     .org-subtitle {
         font-size: 0.9rem;
+        text-align: left;
+        margin: 0;
     }
     
     /* 關於頁面 */
