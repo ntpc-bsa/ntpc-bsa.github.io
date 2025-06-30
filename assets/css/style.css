@@ -1373,6 +1373,50 @@ body {
         margin: 0;
     }
     
+    /* 聯絡資訊區塊對齊優化 */
+    .contact-info-section .section-container {
+        padding: 0 1rem;
+    }
+    
+    .contact-details {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact-org {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    
+    .org-title {
+        text-align: left;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .org-item {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .contact-method {
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+    
+    .method-title {
+        text-align: left;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .method-item {
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
     /* 關於頁面 */
     .about-chart-section {
         padding: 1.5rem 0 2.5rem 0;
