@@ -1245,6 +1245,85 @@ body {
         display: none;
     }
     
+    /* 聯絡頁面對齊優化 */
+    .contact-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 1rem;
+    }
+    
+    .contact-main-content {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .contact-title {
+        text-align: left;
+        line-height: 1.1;
+    }
+    
+    .contact-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .contact-org-header {
+        text-align: left;
+        margin-top: 1.5rem;
+        border-bottom: 2px solid var(--text-dark);
+        padding-bottom: 1rem;
+    }
+    
+    .org-main-title {
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    
+    .org-subtitle {
+        text-align: left;
+        margin: 0;
+    }
+    
+    /* 聯絡資訊區塊對齊 */
+    .contact-info-section .section-container {
+        padding: 0 1rem;
+    }
+    
+    .contact-details {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact-org {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    
+    .org-title {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .org-item {
+        text-align: left;
+        margin-bottom: 0.6rem;
+    }
+    
+    .contact-method {
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+    
+    .method-title {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    
+    .method-item {
+        text-align: left;
+        margin-bottom: 0.6rem;
+    }
+    
     /* 頁腳優化 */
     .footer-content {
         flex-direction: column;
@@ -1331,90 +1410,33 @@ body {
         font-size: 0.85rem;
     }
     
-    /* 聯絡頁面優化 - 針對Pixel 6 Pro等手機設備 */
+    /* 聯絡頁面小螢幕字體優化 */
     .contact-title {
         font-size: 2.5rem;
-        text-align: left;
-        line-height: 1.1;
-    }
-    
-    .contact-hero-content {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        padding: 0 1rem;
-    }
-    
-    .contact-main-content {
-        text-align: left;
-        width: 100%;
-    }
-    
-    .contact-icon {
-        margin-bottom: 1rem;
-    }
-    
-    .contact-org-header {
-        text-align: left;
-        margin-top: 1.5rem;
-        border-bottom: 2px solid var(--text-dark);
-        padding-bottom: 1rem;
     }
     
     .org-main-title {
         font-size: 1.5rem;
-        text-align: left;
-        margin-bottom: 0.5rem;
     }
     
     .org-subtitle {
         font-size: 0.9rem;
-        text-align: left;
-        margin: 0;
-    }
-    
-    /* 聯絡資訊區塊對齊優化 */
-    .contact-info-section .section-container {
-        padding: 0 1rem;
-    }
-    
-    .contact-details {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .contact-org {
-        text-align: left;
-        margin-bottom: 2rem;
     }
     
     .org-title {
-        text-align: left;
         font-size: 1.3rem;
-        margin-bottom: 1rem;
     }
     
     .org-item {
-        text-align: left;
         font-size: 0.9rem;
-        margin-bottom: 0.6rem;
-    }
-    
-    .contact-method {
-        text-align: left;
-        margin-top: 1.5rem;
     }
     
     .method-title {
-        text-align: left;
         font-size: 1.3rem;
-        margin-bottom: 1rem;
     }
     
     .method-item {
-        text-align: left;
         font-size: 0.9rem;
-        margin-bottom: 0.6rem;
     }
     
     /* 關於頁面 */
