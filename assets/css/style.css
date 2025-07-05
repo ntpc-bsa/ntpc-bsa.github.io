@@ -1008,14 +1008,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem 0;
-    text-align: left;
+    text-align: right;
 }
 
 .footer-copyright p {
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
     margin: 0;
-    text-align: left;
+    text-align: right;
 }
 
 /* 回到頂部按鈕 */
