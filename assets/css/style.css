@@ -1371,7 +1371,7 @@ body {
     
     .footer-copyright {
         text-align: left;
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 1rem 0 0 0;
         margin: 1rem 0 0 0;
         max-width: none;
         border-top: 1px solid rgba(255,255,255,0.1);
@@ -1544,7 +1544,7 @@ body {
     }
     
     .footer-copyright {
-        padding: 1.5rem 1rem 1rem 1rem;
+        padding: 1rem 0 0 0;
         text-align: left;
         margin: 1rem 0 0 0;
         max-width: none;
