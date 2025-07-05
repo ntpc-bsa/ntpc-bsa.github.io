@@ -1357,7 +1357,7 @@ body {
         flex-direction: column;
         gap: 2rem;
         text-align: left;
-        padding: 0;
+        padding: 0 1rem 0 1rem;
     }
     
     .footer-social {
@@ -1371,7 +1371,7 @@ body {
     
     .footer-copyright {
         text-align: left;
-        padding: 1.5rem 1.5rem 1rem 0;
+        padding: 1.5rem 1rem 1rem 1rem;
         margin: 1rem 0 0 0;
         max-width: none;
         border-top: 1px solid rgba(255,255,255,0.1);
@@ -1514,7 +1514,7 @@ body {
     
     /* 頁腳優化 */
     .footer-content {
-        padding: 0;
+        padding: 0 1rem 0 1rem;
         gap: 1.5rem;
     }
     
@@ -1544,7 +1544,7 @@ body {
     }
     
     .footer-copyright {
-        padding: 1.5rem 1rem 1rem 0;
+        padding: 1.5rem 1rem 1rem 1rem;
         text-align: left;
         margin: 1rem 0 0 0;
         max-width: none;
