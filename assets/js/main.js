@@ -251,4 +251,149 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
     initializeApp();
-} 
+}
+
+// 動態分頁功能
+class DynamicPagination {
+    constructor(containerId, paginationId, itemsPerPage = 8) {
+        this.container = document.getElementById(containerId);
+        this.pagination = document.getElementById(paginationId);
+        this.itemsPerPage = itemsPerPage;
+        this.currentPage = 1;
+        this.items = [];
+        
+        if (this.container && this.pagination) {
+            this.init();
+        }
+    }
+    
+    init() {
+        // 獲取所有項目
+        this.items = Array.from(this.container.querySelectorAll('.lesson-item'));
+        
+        if (this.items.length === 0) {
+            this.pagination.style.display = 'none';
+            return;
+        }
+        
+        this.totalPages = Math.ceil(this.items.length / this.itemsPerPage);
+        
+        // 如果只有一頁，隱藏分頁
+        if (this.totalPages <= 1) {
+            this.pagination.style.display = 'none';
+            return;
+        }
+        
+        this.renderPagination();
+        this.showPage(1);
+    }
+    
+    renderPagination() {
+        let paginationHTML = '';
+        
+        // 上一頁按鈕
+        paginationHTML += `
+            <a href="#" class="pagination-btn" data-page="prev" ${this.currentPage === 1 ? 'disabled' : ''}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                </svg>
+            </a>
+        `;
+        
+        // 頁面數字按鈕
+        for (let i = 1; i <= this.totalPages; i++) {
+            if (i === this.currentPage) {
+                paginationHTML += `<span class="current">${i}</span>`;
+            } else {
+                paginationHTML += `<a href="#" class="pagination-btn" data-page="${i}">${i}</a>`;
+            }
+        }
+        
+        // 下一頁按鈕
+        paginationHTML += `
+            <a href="#" class="pagination-btn" data-page="next" ${this.currentPage === this.totalPages ? 'disabled' : ''}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                </svg>
+            </a>
+        `;
+        
+        this.pagination.innerHTML = paginationHTML;
+        this.bindEvents();
+    }
+    
+    bindEvents() {
+        const buttons = this.pagination.querySelectorAll('.pagination-btn');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                if (button.hasAttribute('disabled')) {
+                    return;
+                }
+                
+                const page = button.dataset.page;
+                
+                if (page === 'prev') {
+                    this.goToPage(this.currentPage - 1);
+                } else if (page === 'next') {
+                    this.goToPage(this.currentPage + 1);
+                } else {
+                    this.goToPage(parseInt(page));
+                }
+            });
+        });
+    }
+    
+    goToPage(page) {
+        if (page < 1 || page > this.totalPages) {
+            return;
+        }
+        
+        this.currentPage = page;
+        this.showPage(page);
+        this.renderPagination();
+        
+        // 滾動到容器頂部
+        this.container.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+    
+    showPage(page) {
+        const startIndex = (page - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        
+        this.items.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+                item.style.display = '';
+                // 添加淡入動畫
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'all 0.3s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 50);
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+}
+
+// 初始化分頁功能
+document.addEventListener('DOMContentLoaded', function() {
+    // 教案分享頁面分頁
+    if (document.getElementById('lessonsContainer')) {
+        new DynamicPagination('lessonsContainer', 'lessonsPagination', 8);
+    }
+    
+    // VR科技頁面分頁  
+    if (document.getElementById('vrContainer')) {
+        new DynamicPagination('vrContainer', 'vrPagination', 8);
+    }
+}); 

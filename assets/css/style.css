@@ -912,6 +912,16 @@ body {
     color: var(--text-white);
 }
 
+.pagination .pagination-btn[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination .pagination-btn {
+    text-decoration: none;
+}
+
 /* 頁腳 */
 .site-footer {
     background-color: var(--primary-green);

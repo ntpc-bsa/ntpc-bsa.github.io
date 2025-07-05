@@ -16,7 +16,7 @@ permalink: /vr/
         </p>
         
         <!-- VR科技內容網格 -->
-        <div class="lesson-grid">
+        <div class="lesson-grid" id="vrContainer">
             {% for vr in site.vr %}
             <article class="lesson-item">
                 <div class="lesson-image"></div>
@@ -28,33 +28,31 @@ permalink: /vr/
             </article>
             {% endfor %}
             
-            <!-- 如果沒有VR內容，顯示提示信息 -->
+            <!-- 如果沒有VR內容，添加示例內容進行測試 -->
             {% if site.vr.size == 0 %}
-            <div style="text-align: center; padding: 4rem 2rem; color: #666;">
+            {% for i in (1..12) %}
+            <article class="lesson-item">
+                <div class="lesson-image"></div>
+                <div class="lesson-content">
+                    <div class="lesson-category">VR技術</div>
+                    <h3 class="lesson-title">VR虛擬實境教學應用 {{ i }}</h3>
+                    <p class="lesson-description">運用最新VR技術打造沉浸式學習環境，讓學生透過虛擬實境體驗不同的學習情境，提升學習動機與成效。</p>
+                </div>
+            </article>
+            {% endfor %}
+            {% endif %}
+            
+            <!-- 空狀態提示（僅在無示例內容時顯示） -->
+            <div id="vrEmptyState" style="display: none; text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
                 <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">🥽</div>
                 <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有VR科技內容</h3>
                 <p style="line-height: 1.6;">創新的VR教學資源正在開發中，敬請期待！</p>
             </div>
-            {% endif %}
         </div>
         
         <!-- 分頁 -->
-        <nav class="pagination">
-            <a href="#" data-page="prev">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
-                </svg>
-            </a>
-            <span class="current">1</span>
-            <a href="#" data-page="2">2</a>
-            <a href="#" data-page="3">3</a>
-            <a href="#" data-page="4">4</a>
-            <a href="#" data-page="5">5</a>
-            <a href="#" data-page="next">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                </svg>
-            </a>
+        <nav class="pagination" id="vrPagination">
+            <!-- 動態生成分頁按鈕 -->
         </nav>
     </div>
 </section> 
