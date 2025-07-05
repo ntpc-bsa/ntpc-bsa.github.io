@@ -665,24 +665,6 @@ body {
     margin-bottom: 3rem;
 }
 
-.contact-header-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contact-bullet {
-    font-size: 1.5rem;
-    color: var(--text-dark);
-}
-
-.contact-header-text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text-dark);
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
 .contact-hero-content {
     display: flex;
     align-items: flex-start;
