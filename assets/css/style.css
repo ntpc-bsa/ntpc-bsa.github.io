@@ -10,6 +10,35 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #F9F4E9;
+    text-align: left;
+}
+
+/* 通用對齊修復 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+/* 確保所有主要區塊都左對齊 */
+.main-content,
+.hero-section,
+.news-section,
+.about-hero,
+.contact-hero,
+.process-section {
+    text-align: left;
+}
+
+/* 確保所有標題都左對齊 */
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+/* 確保所有段落都左對齊 */
+p {
+    text-align: left;
 }
 
 /* 變數定義 */
@@ -31,10 +60,12 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
 .navbar {
     padding: 1rem 0;
+    text-align: left;
 }
 
 .nav-container {
@@ -44,17 +75,20 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    text-align: left;
 }
 
 .nav-brand a {
     text-decoration: none;
     color: var(--text-white);
+    text-align: left;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-align: left;
 }
 
 .logo-icon {
@@ -93,6 +127,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: left;
 }
 
 .logo-text {
@@ -100,6 +135,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
+    text-align: left;
 }
 
 .logo-subtext {
@@ -107,6 +143,7 @@ body {
     opacity: 0.9;
     line-height: 1.2;
     margin: 0;
+    text-align: left;
 }
 
 .menu-container {
@@ -923,6 +960,7 @@ body {
     background-color: var(--primary-green);
     color: var(--text-white);
     padding: 3rem 0 1rem;
+    text-align: left;
 }
 
 .footer-content {
@@ -931,22 +969,34 @@ body {
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
     margin-bottom: 2rem;
+}
+
+.footer-info {
+    flex: 1;
+    text-align: left;
 }
 
 .footer-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .footer-subtitle {
     opacity: 0.8;
     margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contact-info {
+    text-align: left;
 }
 
 .contact-info p {
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .footer-social {
@@ -954,6 +1004,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .social-title {
@@ -961,11 +1012,13 @@ body {
     font-weight: 600;
     margin-bottom: 1rem;
     color: var(--primary-yellow);
+    text-align: right;
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
 }
 
 .social-link {
@@ -999,14 +1052,18 @@ body {
 }
 
 .footer-copyright {
-    position: relative;
-    top: 45px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
 }
 
 .footer-copyright p {
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
     margin: 0;
+    text-align: center;
 }
 
 /* 回到頂部按鈕 */
@@ -1340,18 +1397,59 @@ body {
     }
     
     /* 頁腳優化 */
+    .site-footer {
+        padding: 2rem 0 1rem;
+    }
+    
     .footer-content {
         flex-direction: column;
         gap: 2rem;
-        text-align: center;
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .footer-info {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .footer-info h3 {
+        text-align: left;
+    }
+    
+    .footer-subtitle {
+        text-align: left;
+    }
+    
+    .contact-info {
+        text-align: left;
+    }
+    
+    .contact-info p {
+        text-align: left;
     }
     
     .footer-social {
-        text-align: center;
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .social-title {
+        text-align: left;
     }
     
     .social-links {
-        justify-content: center;
+        justify-content: flex-start;
+    }
+    
+    .footer-copyright {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+    .footer-copyright p {
+        text-align: center;
     }
 }
 
@@ -1483,6 +1581,49 @@ body {
     .photo-gallery {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    
+    /* 頁腳優化 */
+    .site-footer {
+        padding: 1.5rem 0 1rem;
+    }
+    
+    .footer-content {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+    
+    .footer-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .footer-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+    
+    .social-title {
+        font-size: 1.1rem;
+    }
+    
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .footer-copyright {
+        padding: 1rem 1rem 0;
+    }
+    
+    .footer-copyright p {
+        font-size: 0.8rem;
     }
     
     /* 回到頂部按鈕 */
