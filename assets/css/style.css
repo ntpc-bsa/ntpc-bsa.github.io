@@ -1009,17 +1009,17 @@ body {
 .footer-copyright {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 0 0 2rem;
-    text-align: right;
-    position: relative;
+    padding: 1.5rem 0 1rem 2rem;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 1rem;
 }
 
 .footer-copyright p {
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
     margin: 0;
-    text-align: right;
-    margin-right: 2rem;
+    text-align: left;
 }
 
 /* 回到頂部按鈕 */
@@ -1371,9 +1371,10 @@ body {
     
     .footer-copyright {
         text-align: left;
-        padding: 1rem 1.5rem 0 1.5rem;
-        margin: 0;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        margin: 1rem 0 0 0;
         max-width: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
     
     .footer-copyright p {
@@ -1543,10 +1544,11 @@ body {
     }
     
     .footer-copyright {
-        padding: 1rem 1rem 0 1rem;
+        padding: 1.5rem 1rem 1rem 1rem;
         text-align: left;
-        margin: 0;
+        margin: 1rem 0 0 0;
         max-width: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
     
     .footer-copyright p {
