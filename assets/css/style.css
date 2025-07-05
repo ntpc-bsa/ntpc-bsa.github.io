@@ -344,6 +344,17 @@ body {
     cursor: pointer;
     margin-left: auto;
     text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.more-info-btn:hover {
+    background-color: #d63384;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .news-grid {
