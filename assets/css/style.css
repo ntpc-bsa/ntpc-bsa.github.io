@@ -1008,14 +1008,14 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 2rem 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    text-align: center;
+    text-align: left;
 }
 
 .footer-copyright p {
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
     margin: 0;
+    text-align: left;
 }
 
 /* 回到頂部按鈕 */
@@ -1363,6 +1363,15 @@ body {
     .social-links {
         justify-content: flex-start;
     }
+    
+    .footer-copyright {
+        text-align: left;
+        padding: 1rem 1rem 0;
+    }
+    
+    .footer-copyright p {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1528,10 +1537,12 @@ body {
     
     .footer-copyright {
         padding: 1rem 1rem 0;
+        text-align: left;
     }
     
     .footer-copyright p {
         font-size: 0.8rem;
+        text-align: left;
     }
     
     /* 回到頂部按鈕 */
