@@ -158,9 +158,9 @@ title: 首頁
                 {% elsif has_vr %}
                     {% assign featured_item = site.vr.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "VR科技教學" }}</h3>
-                    <p class="featured-text">
+                <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "運用最新的VR虛擬實境技術，為學生打造沉浸式的學習環境，結合雙語教學，創造創新的教學模式，提升學習效果。" }}
-                    </p>
+                </p>
                 {% endif %}
                 <button class="featured-btn">MORE INFO</button>
             </div>
