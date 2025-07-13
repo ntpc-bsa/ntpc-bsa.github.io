@@ -149,20 +149,22 @@ title: 首頁
                     <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過創新的教案設計，結合雙語教學策略，我們致力於為學生創造更豐富的學習體驗，提升英語學習效能，並建立新的雙語教學學習教育系統。" }}
                     </p>
+                    <a href="/lessons/" class="featured-btn">MORE INFO</a>
                 {% elsif has_photos %}
                     {% assign featured_item = site.photos.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "活動照片分享" }}</h3>
                     <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過豐富的活動照片記錄，展現我們在雙語教學上的成果與師生的學習歷程，分享教學經驗與學習成果，促進學習交流與合作。" }}
                     </p>
+                    <a href="/photos/" class="featured-btn">MORE INFO</a>
                 {% elsif has_vr %}
                     {% assign featured_item = site.vr.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "VR科技教學" }}</h3>
                 <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "運用最新的VR虛擬實境技術，為學生打造沉浸式的學習環境，結合雙語教學，創造創新的教學模式，提升學習效果。" }}
                 </p>
+                    <a href="/vr/" class="featured-btn">MORE INFO</a>
                 {% endif %}
-                <button class="featured-btn">MORE INFO</button>
             </div>
         </div>
         {% else %}

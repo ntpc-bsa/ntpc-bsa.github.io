@@ -456,6 +456,16 @@ body {
     cursor: pointer;
     align-self: flex-start;
     text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.featured-btn:hover {
+    background-color: var(--primary-green);
+    color: var(--text-white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 130, 124, 0.3);
 }
 
 /* 關於頁面 */
@@ -840,12 +850,29 @@ body {
     margin-top: 2rem;
 }
 
+/* 教案連結樣式 */
+.lesson-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.lesson-link:hover {
+    transform: translateY(-5px);
+}
+
 .lesson-item {
     display: flex;
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.lesson-link:hover .lesson-item {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .lesson-image {

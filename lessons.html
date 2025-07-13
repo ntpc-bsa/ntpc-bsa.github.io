@@ -18,14 +18,16 @@ permalink: /lessons/
         <!-- 教案網格 -->
         <div class="lesson-grid" id="lessonsContainer">
             {% for lesson in site.lessons %}
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">分類</div>
-                    <h3 class="lesson-title">{{ lesson.title | default: "教案標題教案標題教案標題教案標題教案標題" }}</h3>
-                    <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。" }}</p>
-                </div>
-            </article>
+            <a href="{{ lesson.url | relative_url }}" class="lesson-link">
+                <article class="lesson-item">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-content">
+                        <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
+                        <h3 class="lesson-title">{{ lesson.title | default: "教案標題教案標題教案標題教案標題教案標題" }}</h3>
+                        <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。" }}</p>
+                    </div>
+                </article>
+            </a>
             {% endfor %}
             
             <!-- 如果沒有教案，添加示例內容進行測試 -->
