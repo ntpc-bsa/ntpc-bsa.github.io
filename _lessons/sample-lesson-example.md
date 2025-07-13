@@ -8,7 +8,6 @@ tags: []
 author: "劉日勛、陳治平"
 ---
 
----
 ### **相關資源**
 
 * [教案 PDF](https://drive.google.com/file/d/1v47i5vj4qZ4h6b0k0yG-1F2r7X6E4t3o/view)
