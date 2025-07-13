@@ -2,7 +2,7 @@
 layout: lesson
 title: "鷺江國中 如何製作伸縮吊臂 (How to Make Telescopic Jibs)"
 date: 2024-12-19
-excerpt: ""
+excerpt: "透過雙語教學方式學習製作伸縮吊臂，結合生活科技、健康體育、美術、童軍、音樂及家政等跨領域學習。"
 category: "七年級"
 tags: []
 author: "劉日勛、陳治平"
