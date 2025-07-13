@@ -20,7 +20,12 @@ permalink: /lessons/
             {% for lesson in site.lessons %}
             <a href="{{ lesson.url | relative_url }}" class="lesson-link">
                 <article class="lesson-item">
-                    <div class="lesson-image"></div>
+                    <div class="lesson-image">
+                        {% if lesson.content contains '<img' %}
+                            {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
+                            <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {% endif %}
+                    </div>
                     <div class="lesson-content">
                         <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
                         <h3 class="lesson-title">{{ lesson.title | default: "教案標題教案標題教案標題教案標題教案標題" }}</h3>
