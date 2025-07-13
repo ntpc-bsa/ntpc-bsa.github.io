@@ -1,125 +1,73 @@
 ---
 layout: lesson
-title: "智慧教室中的科技整合教學法"
+title: "鷺江國中 如何製作伸縮吊臂 (How to Make Telescopic Jibs)"
 date: 2024-12-19
-excerpt: "探討如何在現代教室環境中有效整合各種科技工具，提升學生學習成效與參與度的創新教學方法。"
-category: "科技教育"
-tags: ["智慧教室", "科技整合", "互動教學", "數位學習"]
-author: "張老師"
+excerpt: ""
+category: "七年級"
+tags: []
+author: "劉日勛、陳治平"
 ---
 
-## 教學目標
+---
+### **相關資源**
 
-本教案旨在幫助教師：
-- 了解智慧教室的基本配置與功能
-- 掌握科技工具與教學內容的整合技巧
-- 提升學生的數位素養與學習動機
-
-## 教學對象
-
-- **適用年級**：國小五年級至國中二年級
-- **班級人數**：25-30人
-- **課程時間**：50分鐘 × 2節課
-
-## 所需設備
-
-1. **硬體設備**
-   - 互動式電子白板
-   - 平板電腦或筆記型電腦
-   - 無線網路環境
-   - 投影設備
-
-2. **軟體工具**
-   - 線上協作平台（如 Padlet、Jamboard）
-   - 教學簡報軟體
-   - 即時反饋系統（如 Kahoot、Mentimeter）
-
-## 教學流程
-
-### 第一節課：科技工具認識與體驗
-
-#### 導入活動（10分鐘）
-1. 使用互動式白板播放科技教育相關影片
-2. 透過即時反饋系統收集學生對科技學習的想法
-
-#### 主要活動（30分鐘）
-1. **工具介紹**（15分鐘）
-   - 示範各種教學科技工具的基本操作
-   - 學生分組體驗不同的數位工具
-
-2. **實作練習**（15分鐘）
-   - 學生使用平板進行線上協作
-   - 完成簡單的數位創作任務
-
-#### 總結活動（10分鐘）
-- 分享體驗心得
-- 預告下一節課的活動內容
-
-### 第二節課：創意教學專案製作
-
-#### 暖身活動（5分鐘）
-- 複習上節課學習的工具操作
-
-#### 專案製作（35分鐘）
-1. **分組規劃**（10分鐘）
-   - 學生分成4-5人小組
-   - 選擇感興趣的主題進行深入探討
-
-2. **數位創作**（20分鐘）
-   - 使用學到的科技工具製作簡報或影片
-   - 整合文字、圖片、音訊等多媒體元素
-
-3. **作品分享**（5分鐘）
-   - 各組簡短分享創作成果
-
-#### 反思與評量（10分鐘）
-- 學生自評與互評
-- 教師給予回饋與建議
-
-## 評量方式
-
-### 形成性評量
-- 課堂參與度觀察
-- 小組合作表現
-- 即時反饋系統回應
-
-### 總結性評量
-- 數位作品品質評估
-- 學習心得撰寫
-- 同儕互評結果
-
-## 教學省思
-
-### 成功經驗
-- 學生對科技工具的接受度很高
-- 小組合作促進了同儕學習
-- 多元化的教學活動提升了學習動機
-
-### 改進建議
-- 需要更多時間讓學生熟悉新工具
-- 可以增加更多實作練習的機會
-- 建議提供更詳細的操作指南
-
-## 延伸學習
-
-1. **進階應用**
-   - 探索 AR/VR 在教學中的應用
-   - 學習程式設計基礎概念
-
-2. **跨域整合**
-   - 結合藝術創作與科技表現
-   - 融入環保議題的專案製作
-
-3. **家庭延伸**
-   - 鼓勵學生與家人分享學習成果
-   - 在家中實踐數位學習技能
-
-## 參考資源
-
-- [教育部數位學習推動計畫](https://example.com)
-- [智慧教室設置指南](https://example.com)
-- [科技融入教學案例分享](https://example.com)
-
+* [教案 PDF](https://drive.google.com/file/d/1v47i5vj4qZ4h6b0k0yG-1F2r7X6E4t3o/view)
 ---
 
-**作者簡介**：張老師現任新北市某國小資訊組長，擁有十年以上的科技教育推廣經驗，致力於創新教學方法的研發與實踐。 
+### **各科雙語教學活動**
+
+**生活科技 (Living Technology)**
+學生進行雙語科技產品分享。
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/SJcEyeWLge.jpg" alt="生科雙語_240408_1" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/SJ5V1g-8xg.jpg" alt="生科雙語_240408_2" style="flex: 1; min-width: 48%; object-fit: cover;">
+</div>
+*學生正在用英文介紹他們的生活科技作品。*
+
+**健康與體育 (Health and Physical Education)**
+學生用英文學習人體構造的專有名詞和健康的飲食習慣。
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/BJx0ye-8el.jpg" alt="健教雙語3" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/SkeCylWIxe.jpg" alt="健教雙語2" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/B1g0yeZLxl.jpg" alt="健教雙語" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/BylAkl-Lll.jpg" alt="健教雙語（112上）_240408_1" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/SJeRye-Ull.jpg" alt="健教雙語（七下）_240408_1" style="flex: 1; min-width: 48%; object-fit: cover;">
+</div>
+*課堂上，學生們專注地學習健康知識。*
+
+**美術 (Visual Arts)**
+學生以「美的原則-食在美畫說」為主題，進行雙語藝術學習單分享。
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/rkM0glZLlx.jpg" alt="視藝雙語_240408_3" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/rJzRxlbIxg.jpg" alt="視藝雙語_240408_4" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/ryM0lxWUee.jpg" alt="視藝雙語_240408_5" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/r1fAexZLgx.jpg" alt="視藝雙語_240408_1" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/rkzCxl-Ill.jpg" alt="視藝雙語_240408_2" style="flex: 1; min-width: 48%; object-fit: cover;">
+</div>
+*學生們展示他們以「食」為主題的藝術創作。*
+
+**童軍教育 (Scout Education)**
+學生進行製作火媒棒的雙語活動。
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/ByMJWlWUle.jpg" alt="童軍雙語" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/HkGJZxZIxx.jpg" alt="童軍雙語（七下）_240408_1" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/S1fkZlW8eg.jpg" alt="童軍雙語3" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="https://hackmd.io/_uploads/ryfkZlWIge.jpg" alt="童軍雙語2" style="flex: 1; min-width: 48%; object-fit: cover;">
+</div>
+*童軍課中，學生學習實用的戶外技能。*
+
+**音樂 (Music)**
+學生在雙語音樂課中學習歌唱技巧。
+<div style="margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/SyR1beW8lg.jpg" alt="雙語音樂下_240408_1" style="max-width: 100%;">
+</div>
+*音樂教室裡傳來悠揚的歌聲。*
+
+**家政 (Housekeeping)**
+介紹實用的家政英文關鍵字。
+<div style="margin-bottom: 10px;">
+    <img src="https://hackmd.io/_uploads/SkIxZl-8lg.jpg" alt="雙語家政_240408_1" style="max-width: 100%;">
+</div>
+*家政課堂上，學生學習實用的生活詞彙。*
+
+---
