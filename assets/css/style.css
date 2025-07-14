@@ -1758,19 +1758,7 @@ body {
 
 .content-wrapper h2 {
     font-size: 1.6rem;
-    position: relative;
-    padding-left: 1rem;
-}
-
-.content-wrapper h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.3rem;
-    width: 4px;
-    height: 1.2rem;
-    background: #48a999;
-    border-radius: 2px;
+    padding-left: 0;
 }
 
 .content-wrapper h3 {
