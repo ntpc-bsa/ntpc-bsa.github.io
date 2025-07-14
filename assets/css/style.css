@@ -1666,20 +1666,17 @@ body {
 
 .lesson-meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    align-items: baseline;
 }
 
 .lesson-category,
 .lesson-date {
-    display: inline-block;
     color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     font-weight: 600;
-    margin-right: 0;
-    vertical-align: baseline;
+    line-height: 1.2;
 }
 
 .lesson-title {
@@ -1700,14 +1697,14 @@ body {
 
 .lesson-details {
     display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .lesson-author {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.25);
     padding: 0.6rem 1rem;
@@ -1715,24 +1712,22 @@ body {
     font-weight: 500;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    height: fit-content;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 .lesson-tags {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
 }
 
-
-
 .tag-item {
-    display: inline-block;
     color: rgba(255, 255, 255, 0.85);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
-    margin: 0;
+    line-height: 1.2;
 }
 
 /* Lesson Content */
@@ -1919,20 +1914,19 @@ body {
     }
     
     .lesson-meta {
-        gap: 0.8rem;
-        justify-content: center;
+        gap: 0.5rem;
+        justify-content: flex-start;
     }
     
     .lesson-details {
-        gap: 1rem;
-        margin-top: 1.5rem;
-        justify-content: center;
-        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1rem;
+        justify-content: flex-start;
         align-items: center;
     }
     
     .lesson-tags {
-        justify-content: center;
+        gap: 0.8rem;
     }
     
     .content-wrapper h1 {
