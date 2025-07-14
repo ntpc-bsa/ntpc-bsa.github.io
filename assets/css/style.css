@@ -867,6 +867,7 @@ body {
 
 .lesson-item {
     display: flex;
+    flex-direction: row;
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
@@ -883,6 +884,8 @@ body {
     height: 150px;
     background-color: var(--primary-green);
     flex-shrink: 0;
+    min-width: 200px;
+    display: block;
 }
 
 .lesson-content {
@@ -907,6 +910,18 @@ body {
     color: var(--text-light);
     font-size: 0.9rem;
     line-height: 1.6;
+}
+
+/* 確保桌面版本正確顯示水平布局 */
+@media (min-width: 481px) {
+    .lesson-item {
+        flex-direction: row;
+    }
+    
+    .lesson-image {
+        width: 200px;
+        height: 150px;
+    }
 }
 
 /* 分頁 */
