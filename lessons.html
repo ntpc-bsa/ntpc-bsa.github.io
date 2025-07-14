@@ -35,17 +35,19 @@ permalink: /lessons/
             </a>
             {% endfor %}
             
-            <!-- 如果沒有教案，添加示例內容進行測試 -->
-            {% if site.lessons.size == 0 %}
+            <!-- 暫時強制顯示示例教案來測試樣式 -->
+            {% if true %}
             {% for i in (1..10) %}
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">雙語教學</div>
-                    <h3 class="lesson-title">英語繪本閱讀教學設計 {{ i }}</h3>
-                    <p class="lesson-description">透過生動有趣的英語繪本，結合多媒體教學方式，培養學生英語閱讀興趣與理解能力，並增進跨文化理解。</p>
-                </div>
-            </article>
+            <a href="#" class="lesson-link">
+                <article class="lesson-item">
+                    <div class="lesson-image"></div>
+                    <div class="lesson-content">
+                        <div class="lesson-category">雙語教學</div>
+                        <h3 class="lesson-title">英語繪本閱讀教學設計 {{ i }}</h3>
+                        <p class="lesson-description">透過生動有趣的英語繪本，結合多媒體教學方式，培養學生英語閱讀興趣與理解能力，並增進跨文化理解。</p>
+                    </div>
+                </article>
+            </a>
             {% endfor %}
             {% endif %}
             
