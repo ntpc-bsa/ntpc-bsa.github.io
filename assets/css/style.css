@@ -1664,6 +1664,8 @@ body {
 .lesson-header-bg {
     position: relative;
     z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .lesson-meta {
