@@ -1678,7 +1678,7 @@ body {
     color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     font-weight: 600;
-    margin-right: 15px;
+    margin-right: 0;
     vertical-align: baseline;
 }
 
@@ -1700,7 +1700,7 @@ body {
 
 .lesson-details {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 0.5rem;
     flex-wrap: wrap;
     align-items: center;
@@ -1721,7 +1721,7 @@ body {
 .lesson-tags {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
@@ -1732,8 +1732,7 @@ body {
     color: rgba(255, 255, 255, 0.85);
     font-size: 13px;
     font-weight: 500;
-    margin-right: 10px;
-    margin-bottom: 5px;
+    margin: 0;
 }
 
 /* Lesson Content */
