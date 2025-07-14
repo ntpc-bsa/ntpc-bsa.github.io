@@ -848,8 +848,8 @@ body {
 /* 教案頁面 */
 .lesson-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -867,13 +867,12 @@ body {
 
 .lesson-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease;
-    min-height: 200px;
     height: auto;
 }
 
@@ -882,21 +881,33 @@ body {
 }
 
 .lesson-image {
-    width: 200px;
+    width: 100%;
     height: 200px;
-    background-color: var(--primary-green);
+    background-color: #E5E7EB;
     flex-shrink: 0;
-    min-width: 200px;
     display: block;
+    position: relative;
+}
+
+.lesson-date {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 10;
 }
 
 .lesson-content {
-    padding: 2rem;
+    padding: 1.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 200px;
 }
 
 .lesson-category {
@@ -924,20 +935,15 @@ body {
     overflow: hidden;
 }
 
-/* 確保桌面版本正確顯示水平布局 */
+/* 確保所有設備都使用垂直卡片布局 */
 @media (min-width: 481px) {
     .lesson-item {
-        flex-direction: row;
-        min-height: 200px;
+        flex-direction: column;
     }
     
     .lesson-image {
-        width: 200px;
+        width: 100%;
         height: 200px;
-    }
-    
-    .lesson-content {
-        min-height: 200px;
     }
 }
 
@@ -1592,7 +1598,7 @@ body {
     /* 教案和照片頁面優化 */
     .lesson-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .lesson-item {
@@ -1601,7 +1607,19 @@ body {
     
     .lesson-image {
         width: 100%;
-        height: 120px;
+        height: 180px;
+    }
+    
+    .lesson-content {
+        padding: 1.2rem;
+    }
+    
+    .lesson-date {
+        top: 0.8rem;
+        left: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
     }
     
     .photo-gallery {
@@ -1660,13 +1678,7 @@ body {
         width: 45px;
         height: 45px;
     }
-} 
-
-/* =================================
-   LESSON PAGE STYLES
-   ================================= */
-
-/* All CSS icons removed */
+}
 
 /* Lesson Header */
 .lesson-header {

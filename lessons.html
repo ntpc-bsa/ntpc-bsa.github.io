@@ -25,11 +25,12 @@ permalink: /lessons/
                             {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
                             <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
                         {% endif %}
+                        <div class="lesson-date">{{ lesson.date | date: "%Y-%m-%d" | default: "2024-12-19" }}</div>
                     </div>
                     <div class="lesson-content">
-                        <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
+                        <div class="lesson-category">{{ lesson.category | default: "雙語教學" }}</div>
                         <h3 class="lesson-title">{{ lesson.title | default: "教案標題教案標題教案標題教案標題教案標題" }}</h3>
-                        <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "透過全面性的跨科整體，透露合作，實習活動，以期培養學生多元技能，來藝術教學特色創意，創造成就學習。" }}</p>
+                        <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "透過雙語教學方式學習製作伸縮吊臂，結合生活科技、健康體育、美術、童軍、音樂及家政等跨領域學習。" }}</p>
                     </div>
                 </article>
             </a>
@@ -40,11 +41,13 @@ permalink: /lessons/
             {% for i in (1..10) %}
             <a href="#" class="lesson-link">
                 <article class="lesson-item">
-                    <div class="lesson-image"></div>
+                    <div class="lesson-image">
+                        <div class="lesson-date">2024-12-19</div>
+                    </div>
                     <div class="lesson-content">
                         <div class="lesson-category">雙語教學</div>
-                        <h3 class="lesson-title">英語繪本閱讀教學設計 {{ i }}</h3>
-                        <p class="lesson-description">透過生動有趣的英語繪本，結合多媒體教學方式，培養學生英語閱讀興趣與理解能力，並增進跨文化理解。</p>
+                        <h3 class="lesson-title">鷺江國中 如何製作伸縮吊臂 (How to Make Telescopic Jibs)</h3>
+                        <p class="lesson-description">透過雙語教學方式學習製作伸縮吊臂，結合生活科技、健康體育、美術、童軍、音樂及家政等跨領域學習。</p>
                     </div>
                 </article>
             </a>
