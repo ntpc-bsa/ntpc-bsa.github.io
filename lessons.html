@@ -35,8 +35,8 @@ permalink: /lessons/
             </a>
             {% endfor %}
             
-            <!-- 暫時強制顯示示例教案來測試樣式 -->
-            {% if true %}
+            <!-- 如果沒有教案，添加示例內容進行測試 -->
+            {% if site.lessons.size == 0 %}
             {% for i in (1..10) %}
             <a href="#" class="lesson-link">
                 <article class="lesson-item">
