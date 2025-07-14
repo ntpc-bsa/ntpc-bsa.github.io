@@ -138,31 +138,31 @@ title: 首頁
             <h2>焦點新聞 <span class="title-en">NEWS</span></h2>
         </div>
         
-        {% if total_content > 0 %}
+        {% if site.lessons.size > 0 or site.photos.size > 0 or site.vr.size > 0 %}
         <!-- 有內容時輪播顯示 -->
         <div class="featured-news">
             <div class="featured-image">
-                {% if has_lessons and site.lessons.first.content contains '<img' %}
+                {% if site.lessons.size > 0 and site.lessons.first.content contains '<img' %}
                     {% assign first_img = site.lessons.first.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
                     <img src="{{ first_img }}" alt="教案圖片" style="width: 100%; height: 100%; object-fit: cover;">
                 {% endif %}
             </div>
             <div class="featured-content">
-                {% if has_lessons %}
+                {% if site.lessons.size > 0 %}
                     {% assign featured_item = site.lessons.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "教案分享內容" }}</h3>
                     <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過創新的教案設計，結合雙語教學策略，我們致力於為學生創造更豐富的學習體驗，提升英語學習效能，並建立新的雙語教學學習教育系統。" }}
                     </p>
                     <a href="{{ '/lessons/' | relative_url }}" class="featured-btn">MORE INFO</a>
-                {% elsif has_photos %}
+                {% elsif site.photos.size > 0 %}
                     {% assign featured_item = site.photos.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "活動照片分享" }}</h3>
                     <p class="featured-text">
                         {{ featured_item.excerpt | strip_html | truncate: 200 | default: "透過豐富的活動照片記錄，展現我們在雙語教學上的成果與師生的學習歷程，分享教學經驗與學習成果，促進學習交流與合作。" }}
                     </p>
                     <a href="{{ '/photos/' | relative_url }}" class="featured-btn">MORE INFO</a>
-                {% elsif has_vr %}
+                {% elsif site.vr.size > 0 %}
                     {% assign featured_item = site.vr.first %}
                     <h3 class="featured-title">{{ featured_item.title | default: "VR科技教學" }}</h3>
                 <p class="featured-text">
