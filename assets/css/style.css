@@ -1635,17 +1635,54 @@ body {
    ================================= */
 
 /* CSS Icons using pseudo-elements */
-.icon-folder::before { content: "📁"; margin-right: 0.5rem; }
-.icon-calendar::before { content: "📅"; margin-right: 0.5rem; }
-.icon-user::before { content: "👤"; margin-right: 0.5rem; }
-.icon-tag::before { content: "🏷️"; margin-right: 0.5rem; }
-.icon-arrow-left::before { content: "←"; margin-right: 0.5rem; }
-.icon-arrow-right::before { content: "→"; margin-left: 0.5rem; }
-.icon-list::before { content: "📋"; margin-right: 0.5rem; }
+.icon-folder::before { 
+    content: "📁"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-calendar::before { 
+    content: "📅"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-user::before { 
+    content: "👤"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-tag::before { 
+    content: "🏷️"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-arrow-left::before { 
+    content: "←"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.1rem;
+}
+.icon-arrow-right::before { 
+    content: "→"; 
+    margin-left: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.1rem;
+}
+.icon-list::before { 
+    content: "📋"; 
+    margin-right: 0.4rem; 
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /* Lesson Header */
 .lesson-header {
-    background: linear-gradient(135deg, #2e8b8b 0%, #48a999 100%);
+    background: linear-gradient(135deg, #3a9e9e 0%, #52c4a8 100%);
     color: white;
     padding: 3rem 0;
     position: relative;
@@ -1659,10 +1696,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     background-image: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -1673,21 +1710,24 @@ body {
 
 .lesson-meta {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .lesson-category,
 .lesson-date {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.6rem 1.1rem;
+    border-radius: 22px;
+    font-size: 0.85rem;
+    font-weight: 600;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    line-height: 1;
 }
 
 .lesson-title {
@@ -1708,36 +1748,45 @@ body {
 
 .lesson-details {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2rem;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .lesson-author {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 0.7rem 1.2rem;
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
     font-weight: 500;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .lesson-tags {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: flex-start;
+    gap: 0.6rem;
     flex-wrap: wrap;
 }
 
+.lesson-tags .icon-tag {
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+}
+
 .tag-item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
+    display: inline-block;
+    line-height: 1;
 }
 
 /* Lesson Content */
