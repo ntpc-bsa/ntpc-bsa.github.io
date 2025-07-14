@@ -903,6 +903,8 @@ body {
     color: var(--text-dark);
 }
 
+
+
 .lesson-description {
     color: var(--text-light);
     font-size: 0.9rem;
@@ -1673,7 +1675,7 @@ body {
 
 .lesson-category,
 .lesson-date {
-    color: white;
+    color: #333;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2;
@@ -1685,7 +1687,7 @@ body {
     margin: 1rem 0;
     line-height: 1.2;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    color: white;
+    color: #333;
 }
 
 .lesson-excerpt {
@@ -1715,7 +1717,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
     line-height: 1.2;
-    color: white;
+    color: #333;
 }
 
 .lesson-tags {
@@ -1726,7 +1728,7 @@ body {
 }
 
 .tag-item {
-    color: white;
+    color: #333;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
