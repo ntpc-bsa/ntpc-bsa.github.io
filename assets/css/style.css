@@ -1674,19 +1674,18 @@ body {
 
 .lesson-category,
 .lesson-date {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     background: rgba(255, 255, 255, 0.25);
-    padding: 0.6rem 1.1rem;
+    padding: 10px 18px;
     border-radius: 22px;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 600;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    line-height: 1;
-    height: 40px;
-    min-width: fit-content;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 .lesson-title {
