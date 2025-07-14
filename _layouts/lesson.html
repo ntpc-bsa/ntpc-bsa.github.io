@@ -8,11 +8,9 @@ layout: default
             <div class="lesson-header-bg">
                 <div class="lesson-meta">
                     <span class="lesson-category">
-                        <i class="icon-folder"></i>
                         {{ page.category | default: "教案分享" }}
                     </span>
                     <time class="lesson-date">
-                        <i class="icon-calendar"></i>
                         {{ page.date | date: "%Y年%m月%d日" }}
                     </time>
                 </div>
@@ -26,14 +24,12 @@ layout: default
                 <div class="lesson-details">
                     {% if page.author %}
                         <div class="lesson-author">
-                            <i class="icon-user"></i>
                             <span>{{ page.author }}</span>
                         </div>
                     {% endif %}
                     
                     {% if page.tags and page.tags.size > 0 %}
                         <div class="lesson-tags">
-                            <i class="icon-tag"></i>
                             {% for tag in page.tags %}
                                 <span class="tag-item">{{ tag }}</span>
                             {% endfor %}
@@ -57,7 +53,6 @@ layout: default
             <div class="nav-wrapper">
                 {% if page.previous %}
                     <a href="{{ page.previous.url | relative_url }}" class="nav-prev">
-                        <i class="icon-arrow-left"></i>
                         <div class="nav-content">
                             <span class="nav-label">上一篇</span>
                             <span class="nav-title">{{ page.previous.title }}</span>
@@ -66,7 +61,6 @@ layout: default
                 {% endif %}
                 
                 <a href="{{ '/lessons/' | relative_url }}" class="nav-home">
-                    <i class="icon-list"></i>
                     <span>返回教案列表</span>
                 </a>
                 
@@ -76,7 +70,6 @@ layout: default
                             <span class="nav-label">下一篇</span>
                             <span class="nav-title">{{ page.next.title }}</span>
                         </div>
-                        <i class="icon-arrow-right"></i>
                     </a>
                 {% endif %}
             </div>

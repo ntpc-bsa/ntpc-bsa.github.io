@@ -1634,67 +1634,7 @@ body {
    LESSON PAGE STYLES
    ================================= */
 
-/* CSS Icons using pseudo-elements */
-.icon-folder::before { 
-    content: "▦"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
-}
-.icon-calendar::before { 
-    content: "●"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.7rem;
-}
-.icon-user::before { 
-    content: "◉"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.8rem;
-}
-.icon-tag::before { 
-    content: "◆"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.8rem;
-}
-.icon-arrow-left::before { 
-    content: "‹"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.icon-arrow-right::before { 
-    content: "›"; 
-    margin-left: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.icon-list::before { 
-    content: "≡"; 
-    margin-right: 0.5rem; 
-    display: inline-block;
-    vertical-align: middle;
-    font-weight: bold;
-    font-size: 1rem;
-}
+/* All CSS icons removed */
 
 /* Lesson Header */
 .lesson-header {
@@ -1792,10 +1732,7 @@ body {
     flex-wrap: wrap;
 }
 
-.lesson-tags .icon-tag {
-    flex-shrink: 0;
-    align-self: center;
-}
+
 
 .tag-item {
     background: rgba(255, 255, 255, 0.3);
