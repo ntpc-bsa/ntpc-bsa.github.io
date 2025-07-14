@@ -1675,17 +1675,11 @@ body {
 .lesson-category,
 .lesson-date {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    padding: 10px 18px;
-    border-radius: 22px;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     font-weight: 600;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    line-height: 20px;
-    text-align: center;
+    margin-right: 15px;
     vertical-align: baseline;
-    box-sizing: border-box;
 }
 
 .lesson-title {
@@ -1734,19 +1728,12 @@ body {
 
 
 .tag-item {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 0.6rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    height: 32px;
-    min-width: fit-content;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 /* Lesson Content */
