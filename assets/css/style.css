@@ -1673,7 +1673,7 @@ body {
 
 .lesson-category,
 .lesson-date {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.2;
@@ -1714,6 +1714,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
     line-height: 1.2;
+    color: white;
 }
 
 .lesson-tags {
@@ -1724,7 +1725,7 @@ body {
 }
 
 .tag-item {
-    color: rgba(255, 255, 255, 0.85);
+    color: white;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.2;
