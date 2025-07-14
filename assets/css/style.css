@@ -1696,6 +1696,7 @@ body {
     margin: 1.5rem 0;
     opacity: 0.95;
     max-width: 800px;
+    color: #333;
 }
 
 .lesson-details {
@@ -1790,16 +1791,17 @@ body {
 }
 
 .content-wrapper a {
-    color: #2e8b8b;
+    color: #333;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 0.9rem;
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
 }
 
 .content-wrapper a:hover {
-    color: #48a999;
-    border-bottom-color: #48a999;
+    color: #666;
+    border-bottom-color: #666;
 }
 
 .content-wrapper hr {
