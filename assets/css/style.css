@@ -848,8 +848,8 @@ body {
 /* 教案頁面 */
 .lesson-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
     margin-top: 3rem;
 }
 
@@ -858,34 +858,33 @@ body {
     text-decoration: none;
     color: inherit;
     display: block;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lesson-link:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-4px);
 }
 
 .lesson-item {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background: linear-gradient(145deg, #ffffff 0%, #f8fffe 100%);
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    height: auto;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 180px;
     border: 1px solid rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
 }
 
 .lesson-link:hover .lesson-item {
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
     border-color: rgba(13, 130, 124, 0.2);
 }
 
 .lesson-image {
-    width: 100%;
-    height: 240px;
+    width: 200px;
+    height: 180px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     flex-shrink: 0;
     display: block;
@@ -905,36 +904,40 @@ body {
 }
 
 .lesson-image img {
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .lesson-link:hover .lesson-image img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .lesson-date {
     position: absolute;
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
     color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
     font-weight: 600;
     z-index: 10;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .lesson-content {
-    padding: 2rem;
+    padding: 1.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     background: linear-gradient(145deg, #ffffff 0%, #f9fcfb 100%);
+    min-height: 180px;
 }
 
 .lesson-category {
@@ -989,15 +992,20 @@ body {
     transform: scaleX(1);
 }
 
-/* 確保所有設備都使用垂直卡片布局 */
+/* 確保桌面設備使用水平卡片布局 */
 @media (min-width: 481px) {
     .lesson-item {
-        flex-direction: column;
+        flex-direction: row;
+        height: 180px;
     }
     
     .lesson-image {
-        width: 100%;
-        height: 200px;
+        width: 200px;
+        height: 180px;
+    }
+    
+    .lesson-content {
+        min-height: 180px;
     }
 }
 
