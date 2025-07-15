@@ -931,7 +931,7 @@ body {
     min-height: 180px;
 }
 
-.lesson-category {
+.lesson-item .lesson-category {
     color: var(--primary-green);
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
@@ -941,7 +941,7 @@ body {
     width: fit-content;
 }
 
-.lesson-title {
+.lesson-item .lesson-title {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -950,7 +950,7 @@ body {
     flex-shrink: 0;
 }
 
-.lesson-description {
+.lesson-item .lesson-description {
     color: #666;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -1653,11 +1653,11 @@ body {
         font-size: 0.8rem;
     }
     
-    .lesson-title {
+    .lesson-item .lesson-title {
         font-size: 1.2rem;
     }
     
-    .lesson-category {
+    .lesson-item .lesson-category {
         font-size: 0.8rem;
         padding: 0.3rem 0.8rem;
     }
