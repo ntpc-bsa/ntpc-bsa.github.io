@@ -892,16 +892,7 @@ body {
     overflow: hidden;
 }
 
-.lesson-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(13, 130, 124, 0.8) 0%, rgba(82, 196, 168, 0.6) 100%);
-    z-index: 1;
-}
+
 
 .lesson-image img {
     transition: transform 0.3s ease;
@@ -942,55 +933,32 @@ body {
 
 .lesson-category {
     color: var(--primary-green);
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
     flex-shrink: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, rgba(13, 130, 124, 0.1) 0%, rgba(82, 196, 168, 0.1) 100%);
-    border-radius: 20px;
     display: inline-block;
-    border: 1px solid rgba(13, 130, 124, 0.2);
     width: fit-content;
 }
 
 .lesson-title {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
     color: var(--text-dark);
     line-height: 1.4;
     flex-shrink: 0;
-    letter-spacing: -0.5px;
 }
 
 .lesson-description {
-    color: #5a6c7d;
-    font-size: 0.95rem;
-    line-height: 1.7;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
     flex: 1;
-    overflow: hidden;
-    margin-bottom: 1rem;
+    margin-top: auto;
 }
 
-.lesson-content::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-green) 0%, var(--primary-pink) 50%, var(--primary-yellow) 100%);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    transform-origin: left;
-}
 
-.lesson-link:hover .lesson-content::after {
-    transform: scaleX(1);
-}
 
 /* 確保桌面設備使用水平卡片布局 */
 @media (min-width: 481px) {
