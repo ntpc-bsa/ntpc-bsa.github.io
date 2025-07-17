@@ -1,4 +1,4 @@
-/* 基本設定 */
+/* σƒ║µ£¼Φ¿¡σ«Ü */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     background-color: #F9F4E9;
 }
 
-/* 變數定義 */
+/* Φ«èµò╕σ«Üτ╛⌐ */
 :root {
     --primary-green: #0d827c;
     --primary-pink: #e899a7;
@@ -24,7 +24,7 @@ body {
     --text-white: #ffffff;
 }
 
-/* 頁頭樣式 */
+/* ΘáüΘá¡µ¿úσ╝Å */
 .site-header {
     background-color: var(--primary-green);
     position: sticky;
@@ -218,12 +218,12 @@ body {
     font-weight: 400;
 }
 
-/* 主要內容 */
+/* Σ╕╗Φªüσàºσ«╣ */
 .main-content {
     min-height: calc(100vh - 200px);
 }
 
-/* 首頁英雄區域 */
+/* ΘªûΘáüΦï▒Θ¢äσìÇσƒƒ */
 .hero-section {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green) 60%, var(--primary-yellow) 60%, var(--primary-yellow) 100%);
     min-height: 60vh;
@@ -292,7 +292,7 @@ body {
     transform: rotate(-25deg);
 }
 
-/* 新聞區塊 */
+/* µû░Φü₧σìÇσíè */
 .news-section {
     padding: 4rem 0;
     background-color: var(--white);
@@ -411,7 +411,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* 焦點新聞 */
+/* τäªΘ╗₧µû░Φü₧ */
 .featured-news {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-pink) 100%);
     border-radius: 15px;
@@ -471,7 +471,7 @@ body {
     box-shadow: 0 5px 15px rgba(13, 130, 124, 0.3);
 }
 
-/* 關於頁面 */
+/* Θù£µû╝ΘáüΘ¥ó */
 .about-hero {
     background-color: var(--white);
     padding: 4rem 0 0 0;
@@ -561,7 +561,7 @@ body {
     letter-spacing: 0.3px;
 }
 
-/* 關於頁面圖表區塊 */
+/* Θù£µû╝ΘáüΘ¥óσ£ûΦí¿σìÇσíè */
 .about-chart-section {
     background-color: var(--white);
     padding: 4rem 0 4rem 0;
@@ -595,7 +595,7 @@ body {
     font-weight: 300;
 }
 
-/* 流程圖 */
+/* µ╡üτ¿ïσ£û */
 .process-section {
     padding: 4rem 0;
     background-color: var(--white);
@@ -660,7 +660,7 @@ body {
     box-sizing: border-box;
 }
 
-/* 刪除描述文字樣式 */
+/* σê¬ΘÖñµÅÅΦ┐░µûçσ¡ùµ¿úσ╝Å */
 
 .process-connector {
     width: 60px;
@@ -677,7 +677,7 @@ body {
     display: none;
 }
 
-/* 聯絡頁面 */
+/* Φü»τ╡íΘáüΘ¥ó */
 .contact-hero {
     background-color: var(--white);
     padding: 4rem 0;
@@ -724,7 +724,7 @@ body {
 }
 
 .contact-icon-circle::before {
-    content: '💬';
+    content: '≡ƒÆ¼';
     font-size: 3rem;
     filter: brightness(0) invert(1);
 }
@@ -814,7 +814,7 @@ body {
     line-height: 1.6;
 }
 
-/* 照片頁面 */
+/* τàºτëçΘáüΘ¥ó */
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -845,15 +845,15 @@ body {
     color: var(--text-dark);
 }
 
-/* 教案頁面 */
+/* µòÖµíêΘáüΘ¥ó */
 .lesson-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
     margin-top: 2rem;
 }
 
-/* 教案連結樣式 */
+/* µòÖµíêΘÇúτ╡Éµ¿úσ╝Å */
 .lesson-link {
     text-decoration: none;
     color: inherit;
@@ -867,11 +867,14 @@ body {
 
 .lesson-item {
     display: flex;
+    flex-direction: row;
     background-color: var(--white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease;
+    min-height: 200px;
+    height: auto;
 }
 
 .lesson-link:hover .lesson-item {
@@ -880,38 +883,65 @@ body {
 
 .lesson-image {
     width: 200px;
-    height: 150px;
+    height: 200px;
     background-color: var(--primary-green);
     flex-shrink: 0;
+    min-width: 200px;
+    display: block;
 }
 
 .lesson-content {
-    padding: 1.5rem;
+    padding: 2rem;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 200px;
 }
 
 .lesson-category {
     color: var(--primary-green);
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    flex-shrink: 0;
 }
 
 .lesson-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     color: var(--text-dark);
+    line-height: 1.3;
+    flex-shrink: 0;
 }
-
-
 
 .lesson-description {
     color: var(--text-light);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.6;
+    flex: 1;
+    overflow: hidden;
 }
 
-/* 分頁 */
+/* τó║Σ┐¥µíîΘ¥óτëêµ£¼µ¡úτó║Θí»τñ║µ░┤σ╣│σ╕âσ▒Ç */
+@media (min-width: 481px) {
+    .lesson-item {
+        flex-direction: row;
+        min-height: 200px;
+    }
+    
+    .lesson-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .lesson-content {
+        min-height: 200px;
+    }
+}
+
+/* σêåΘáü */
 .pagination {
     display: flex;
     justify-content: center;
@@ -954,7 +984,7 @@ body {
     text-decoration: none;
 }
 
-/* 頁腳 */
+/* ΘáüΦà│ */
 .site-footer {
     background-color: var(--primary-green);
     color: var(--text-white);
@@ -1058,7 +1088,7 @@ body {
     text-align: left;
 }
 
-/* 回到頂部按鈕 */
+/* σ¢₧σê░ΘáéΘâ¿µîëΘêò */
 .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -1087,9 +1117,9 @@ body {
     display: flex;
 }
 
-/* 響應式設計 */
+/* Θƒ┐µçëσ╝ÅΦ¿¡Φ¿ê */
 @media (max-width: 768px) {
-    /* 導航優化 */
+    /* σ░ÄΦê¬σä¬σîû */
     .nav-container {
         padding: 0 1rem;
     }
@@ -1113,7 +1143,7 @@ body {
         right: -1rem;
     }
     
-    /* 英雄區域優化 */
+    /* Φï▒Θ¢äσìÇσƒƒσä¬σîû */
     .hero-section {
         min-height: 50vh;
         padding: 2rem 0;
@@ -1149,7 +1179,7 @@ body {
         height: 80px;
     }
     
-    /* 新聞區塊優化 */
+    /* µû░Φü₧σìÇσíèσä¬σîû */
     .news-section {
         padding: 2rem 0;
     }
@@ -1220,7 +1250,7 @@ body {
         font-size: 0.85rem;
     }
     
-    /* 焦點新聞優化 */
+    /* τäªΘ╗₧µû░Φü₧σä¬σîû */
     .featured-news {
         flex-direction: column;
         min-height: auto;
@@ -1249,7 +1279,7 @@ body {
         font-size: 0.8rem;
     }
     
-    /* 關於頁面優化 */
+    /* Θù£µû╝ΘáüΘ¥óσä¬σîû */
     .about-content-section {
         flex-direction: column;
     }
@@ -1311,7 +1341,7 @@ body {
         display: none;
     }
     
-    /* 聯絡頁面對齊優化 - 強制左對齊 */
+    /* Φü»τ╡íΘáüΘ¥óσ░ìΘ╜èσä¬σîû - σ╝╖σê╢σ╖ªσ░ìΘ╜è */
     .contact-hero {
         text-align: left !important;
     }
@@ -1359,7 +1389,7 @@ body {
         margin: 0 !important;
     }
     
-    /* 聯絡資訊區塊對齊 - 強制左對齊 */
+    /* Φü»τ╡íΦ│çΦ¿èσìÇσíèσ░ìΘ╜è - σ╝╖σê╢σ╖ªσ░ìΘ╜è */
     .contact-info-section {
         text-align: left !important;
     }
@@ -1405,7 +1435,7 @@ body {
         margin-bottom: 0.6rem !important;
     }
     
-    /* 頁腳優化 */
+    /* ΘáüΦà│σä¬σîû */
     .footer-content {
         flex-direction: column;
         gap: 2rem;
@@ -1436,7 +1466,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    /* 小螢幕進一步優化 */
+    /* σ░ÅΦ₧óσ╣òΘÇ▓Σ╕Çµ¡Ñσä¬σîû */
     .nav-container {
         padding: 0 1rem;
     }
@@ -1458,7 +1488,7 @@ body {
         padding: 0 1rem;
     }
     
-    /* 英雄區域 */
+    /* Φï▒Θ¢äσìÇσƒƒ */
     .hero-section {
         min-height: 40vh;
     }
@@ -1472,7 +1502,7 @@ body {
         width: 25%;
     }
     
-    /* 新聞區塊 */
+    /* µû░Φü₧σìÇσíè */
     .section-title {
         gap: 0.5rem;
     }
@@ -1519,7 +1549,7 @@ body {
         font-size: 0.85rem;
     }
     
-    /* 聯絡頁面小螢幕字體優化 */
+    /* Φü»τ╡íΘáüΘ¥óσ░ÅΦ₧óσ╣òσ¡ùΘ½öσä¬σîû */
     .contact-title {
         font-size: 2.5rem;
     }
@@ -1548,7 +1578,7 @@ body {
         font-size: 0.9rem;
     }
     
-    /* 關於頁面 */
+    /* Θù£µû╝ΘáüΘ¥ó */
     .about-chart-section {
         padding: 1.5rem 0 2.5rem 0;
     }
@@ -1559,7 +1589,7 @@ body {
         padding: 0 1rem;
     }
     
-    /* 教案和照片頁面優化 */
+    /* µòÖµíêσÆîτàºτëçΘáüΘ¥óσä¬σîû */
     .lesson-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -1579,7 +1609,7 @@ body {
         gap: 1rem;
     }
     
-    /* 頁腳優化 */
+    /* ΘáüΦà│σä¬σîû */
     .footer-content {
         padding: 0 1rem 0 1rem;
         gap: 1.5rem;
@@ -1623,7 +1653,7 @@ body {
         text-align: left;
     }
     
-    /* 回到頂部按鈕 */
+    /* σ¢₧σê░ΘáéΘâ¿µîëΘêò */
     .back-to-top {
         bottom: 1rem;
         right: 1rem;

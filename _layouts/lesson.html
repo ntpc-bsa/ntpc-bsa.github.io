@@ -43,7 +43,7 @@ layout: default
     <div class="lesson-content">
         <div class="section-container">
             <div class="content-wrapper">
-                {{ content }}
+            {{ content }}
             </div>
         </div>
     </div>
@@ -51,27 +51,27 @@ layout: default
     <nav class="lesson-navigation">
         <div class="section-container">
             <div class="nav-wrapper">
-                {% if page.previous %}
-                    <a href="{{ page.previous.url | relative_url }}" class="nav-prev">
+            {% if page.previous %}
+                <a href="{{ page.previous.url | relative_url }}" class="nav-prev">
                         <div class="nav-content">
                             <span class="nav-label">上一篇</span>
                             <span class="nav-title">{{ page.previous.title }}</span>
                         </div>
-                    </a>
-                {% endif %}
-                
+                </a>
+            {% endif %}
+            
                 <a href="{{ '/lessons/' | relative_url }}" class="nav-home">
                     <span>返回教案列表</span>
                 </a>
                 
-                {% if page.next %}
-                    <a href="{{ page.next.url | relative_url }}" class="nav-next">
+            {% if page.next %}
+                <a href="{{ page.next.url | relative_url }}" class="nav-next">
                         <div class="nav-content">
                             <span class="nav-label">下一篇</span>
                             <span class="nav-title">{{ page.next.title }}</span>
                         </div>
-                    </a>
-                {% endif %}
+                </a>
+            {% endif %}
             </div>
         </div>
     </nav>
