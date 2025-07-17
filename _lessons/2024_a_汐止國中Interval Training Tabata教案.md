@@ -30,7 +30,7 @@ Various activities are held to encourage students participation, such as English
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/圖片1.jpg' | relative_url }}" alt="汐止國中活動照片" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/圖片1.jpg' | relative_url }}" alt="汐止國中活動照片" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 **雙語課程 Bilingual Courses:**
@@ -45,7 +45,7 @@ economics courses, classroom English and content knowledge are integrated to fac
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_9106.JPG' | relative_url }}" alt="汐止國中教學活動" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_9106.JPG' | relative_url }}" alt="汐止國中教學活動" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 **建立雙語教學支持系統 Bilingual Teaching Support System :**
@@ -60,7 +60,7 @@ English teachers and content teachers discuss lesson plans and conduct classroom
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_8360.JPG' | relative_url }}" alt="教師專業成長" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_8360.JPG' | relative_url }}" alt="教師專業成長" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 **雙語教師專業學習社群 Bilingual Teacher Learning Community :**
@@ -75,7 +75,7 @@ Teachers in learning community gather twice a week, improving ourselves through 
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/相片 2023-10-16 14 49 24.jpg' | relative_url }}" alt="汐止國中雙語教學成果" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/相片 2023-10-16 14 49 24.jpg' | relative_url }}" alt="汐止國中雙語教學成果" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 

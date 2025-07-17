@@ -21,37 +21,37 @@ author: "王苡倫、陳玟光、Robert Temple"
 ▶ Bilingual Counseling Education incorporates collaborative learning and provides differentiated tasks based on students’ language proficiency levels.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/1.webp' | relative_url }}" alt="雙語輔導教育協作學習" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/1.webp' | relative_url }}" alt="雙語輔導教育協作學習" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Bilingual Musical Education utilizes strategies activities to invoke motivation and rewards to encourage learning.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/2 (1).jpg' | relative_url }}" alt="雙語音樂教育策略活動" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/2 (1).jpg' | relative_url }}" alt="雙語音樂教育策略活動" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Bilingual Scout Education strengthens basic classroom English as the foundation for seventh-graders and integrates technology with hands-on scouting skills.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/3 (1).jpg' | relative_url }}" alt="雙語童軍教育技能整合" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/3 (1).jpg' | relative_url }}" alt="雙語童軍教育技能整合" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Bilingual Cross-Disciplinary Education adapts Project-Based Learning to enhance information literacy and improve students’ ability to make presentations in English.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/4 NEW.jpg' | relative_url }}" alt="專題式學習跨領域教育" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/4 NEW.jpg' | relative_url }}" alt="專題式學習跨領域教育" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Foreign and local teachers co-teach Information Technology classes to provide a lively, interesting, and immersive bilingual environment.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/5.jpg' | relative_url }}" alt="外師與本土教師協同教學" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/5.jpg' | relative_url }}" alt="外師與本土教師協同教學" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Students at ECJH actively participate in various English competitions and achieve
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/6.jpg' | relative_url }}" alt="學生積極參與英語競賽" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/二重國中/原始照片/6.jpg' | relative_url }}" alt="學生積極參與英語競賽" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 

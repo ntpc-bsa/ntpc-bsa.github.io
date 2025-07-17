@@ -42,7 +42,7 @@ author: "林子皓"
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-健康教育王筱君.jpg' | relative_url }}" alt="橄欖球技能訓練" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-健康教育王筱君.jpg' | relative_url }}" alt="橄欖球技能訓練" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 In the 111th school year, in addition to the art field (visual and expressive arts) continued to be extended to grade 8, the physical fitness field (health education, physical education) was added to implement bilingualism in grade 7, so that more teachers and subjects can participate, and students will have more opportunities to get in touch with English courses. For the 112th academic year, the bilingual curriculum in the fields of arts and fitness has been continued, allowing students to continue to immerse themselves in a bilingual curriculum environment.
@@ -53,7 +53,7 @@ In the 111th school year, in addition to the art field (visual and expressive ar
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/外師教師情境布置1.jpg' | relative_url }}" alt="中正國中雙語課程推廣" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/外師教師情境布置1.jpg' | relative_url }}" alt="中正國中雙語課程推廣" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 In addition, for the promotion of bilingual courses, from 110 to 113, students will apply for a bilingual digital buddy and communicate online with a university buddy from the English Department of Fu Jen University. American college students serve as student companions to lead students to systematically and repeatedly practice English listening and speaking skills. In the summer, the all-English experience camp will be held in Taiwan, where international students will experience life in English with students through games and courses, and at the same time prepare special reports for the forum, and meet the challenges of the stage report with the children.
@@ -69,7 +69,7 @@ In addition, for the promotion of bilingual courses, from 110 to 113, students w
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/全民英檢中級通過.jpg' | relative_url }}" alt="中正國中雙語教學成果" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/全民英檢中級通過.jpg' | relative_url }}" alt="中正國中雙語教學成果" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 

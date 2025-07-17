@@ -1967,6 +1967,36 @@ body {
     border-radius: 0 8px 8px 0;
 }
 
+/* 圖片並排顯示容器 */
+.content-wrapper .image-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* 教案頁面中包含兩張並排圖片的段落 */
+.content-wrapper p:has(img[style*="flex: 1; min-width: 48%"]) {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* 確保段落中的圖片能正確並排 */
+.content-wrapper p img[style*="flex: 1; min-width: 48%"] {
+    flex: 1;
+    min-width: 48%;
+    max-width: 48%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
 /* Lesson Navigation */
 .lesson-navigation {
     background: #f8f9fa;
@@ -2070,6 +2100,17 @@ body {
     
     .content-wrapper h2 {
         font-size: 1.3rem;
+    }
+    
+    /* 小螢幕上圖片垂直排列 */
+    .content-wrapper p:has(img[style*="flex: 1; min-width: 48%"]) {
+        flex-direction: column;
+    }
+    
+    .content-wrapper p img[style*="flex: 1; min-width: 48%"] {
+        max-width: 100%;
+        min-width: 100%;
+        flex: none;
     }
     
     .nav-wrapper {

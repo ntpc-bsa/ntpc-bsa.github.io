@@ -27,7 +27,7 @@ author: "曾詠翔"
 3.  理解環境指標生物
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/2024/清水高中/原始照片/清水高中易拉展-照片.webp' | relative_url }}" alt="清水高中雙語課程教學" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/清水高中/原始照片/清水高中易拉展-照片.webp' | relative_url }}" alt="清水高中雙語課程教學" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 
