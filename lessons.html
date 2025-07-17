@@ -15,23 +15,28 @@ permalink: /lessons/
             本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
         </p>
         
-        <!-- 教案網格 -->
-        <div class="lesson-grid" id="lessonsContainer">
+        <!-- 教案列表 -->
+        <div class="lesson-list" id="lessonsContainer">
             {% for lesson in site.lessons %}
             <a href="{{ lesson.url | relative_url }}" class="lesson-link">
-            <article class="lesson-item">
+                <article class="lesson-item">
                     <div class="lesson-image">
                         {% if lesson.content contains '<img' %}
                             {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
                             <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {% else %}
+                            <div class="lesson-image-placeholder">
+                                <div class="lesson-icon">📚</div>
+                                <div class="lesson-school">{{ lesson.title | split: ' ' | first }}</div>
+                            </div>
                         {% endif %}
                     </div>
-                <div class="lesson-content">
+                    <div class="lesson-content">
                         <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
-                    <h3 class="lesson-title">{{ lesson.title | default: "課程標題" }}</h3>
-                    <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 120 | default: "課程說明將會顯示在這裡。" }}</p>
-                </div>
-            </article>
+                        <h3 class="lesson-title">{{ lesson.title | default: "課程標題" }}</h3>
+                        <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 150 | default: "課程說明將會顯示在這裡。" }}</p>
+                    </div>
+                </article>
             </a>
             {% endfor %}
             
@@ -57,9 +62,6 @@ permalink: /lessons/
                 </div>
         </div>
         
-        <!-- 分頁 -->
-        <nav class="pagination" id="lessonsPagination">
-            <!-- 動態生成分頁按鈕 -->
-        </nav>
+
     </div>
 </section> 

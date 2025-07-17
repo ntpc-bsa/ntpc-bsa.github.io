@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: "二重國中 Easy-Designing a Website in Google"
-date: 2024-07-16
+date: 2024-07-02
 excerpt: "本教案旨在透過網頁設計課程，培養學生資訊科技應用能力，提升數位素養，並鼓勵探索資訊科技興趣。"
 category: "七年級"
 tags: ["資訊科技", "網頁設計", "雙語教學", "數位素養"]

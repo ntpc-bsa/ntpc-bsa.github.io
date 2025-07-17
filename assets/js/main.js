@@ -387,11 +387,6 @@ class DynamicPagination {
 
 // 初始化分頁功能
 document.addEventListener('DOMContentLoaded', function() {
-    // 教案分享頁面分頁
-    if (document.getElementById('lessonsContainer')) {
-        new DynamicPagination('lessonsContainer', 'lessonsPagination', 8);
-    }
-    
     // VR科技頁面分頁  
     if (document.getElementById('vrContainer')) {
         new DynamicPagination('vrContainer', 'vrPagination', 8);

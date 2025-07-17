@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: "佳林國中 Keep Cancer Away"
-date: 2024-07-16
+date: 2024-07-03
 excerpt: "本教案旨在透過健康教育雙語課程，提升學生對癌症的認知與防治能力，並鼓勵學生積極參與英語學習活動。"
 category: "八年級"
 tags: ["健康教育", "雙語教學", "癌症防治", "英語學習"]

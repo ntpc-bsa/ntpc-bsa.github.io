@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: "清水高中 Chapter 2 Used Score card reproduce"
-date: 2024-07-16
+date: 2024-07-09
 excerpt: "本教案旨在透過遊戲與競賽，引導學生學習生活科技知識，並培養雙語學習習慣，將所學與真實世界連結。"
 category: "七年級"
 tags: ["生活科技", "雙語教學", "遊戲學習", "環境教育"]

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: "汐止國中 Interval Training:Tabata"
-date: 2024-07-16
+date: 2024-07-07
 excerpt: "本教案旨在透過體育雙語課程，提升學生對Tabata間歇訓練的理解與實踐，並營造友善的雙語學習環境。"
 category: "七年級"
 tags: ["體育", "Tabata", "雙語教學", "間歇訓練"]

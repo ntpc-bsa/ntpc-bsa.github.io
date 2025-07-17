@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: "林口國中 Sort Algorithm"
-date: 2024-07-16
+date: 2024-07-05
 excerpt: "本教案旨在透過雙語教學，引導學生學習排序演算法的基本概念，並探討資訊科技對日常生活的影響。"
 category: "資訊科技"
 tags: ["資訊科技", "演算法", "雙語教學", "運算思維"]
