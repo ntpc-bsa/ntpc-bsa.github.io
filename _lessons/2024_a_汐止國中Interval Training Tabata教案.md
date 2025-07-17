@@ -25,12 +25,12 @@ author: "陳佳瑩"
 Various activities are held to encourage students participation, such as English announcements, English Day, Christmas English broadcast, etc.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh4.googleusercontent.com/bPhW7PwRVE9kgbv0ke8e9cuDuKWsV4NCDo_tAoCGNAtKp2YBOUlgygux54PLVrOM3GifSKIE5giqyBB3VJ9jdUB514suy08BqQ0cFH2uPcSZdidHcWbw-mbxsJx0PcXs771vAuFbfn-EiW3RjaYx9q_BWEHy8jQpQyc3fYGPi96OPHVTMAXnnQ=w1280" alt="Image 15" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh6.googleusercontent.com/3lhmI74uf0BYryuab8AlDrUC5jUMZDso_85mFjjmMmdbZFaSW6daEhNYGmLL4yB7iH1-4Ve5qxwc5iVk-yIGu9m3MBM45Y3DxAopEEFS6aY-vIqSrPX_w_3DdNnbfiXN-UC9qIwUmJdIAdtdzknHGC1RYfs-tnd7vtQBuS6fW382_dYpZ3Vj9w=w1280" alt="Image 16" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/英語日廣播.jpg' | relative_url }}" alt="英語日廣播" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/雙語社群.jpg' | relative_url }}" alt="雙語社群" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh6.googleusercontent.com/0ZjNORQg4F5AwK1sBXgiaBS1KvDAOL2Hl71yJkmyI0eZkgQqCHJDePHoo8SaHNzP4-DM8FZu1oZlMBENEZm0mtqal6Sypu3lQ6QeJ3RdmfvQxdbKCVNE5H1B4UBBpKOquGOYfK0lPRADG98T0_KCHvspv1cZLeIGYfMG88czY0Uo7HJLKjfUPA=w1280" alt="Image 17" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/圖片1.jpg' | relative_url }}" alt="汐止國中活動照片" style="max-width: 100%;">
 </div>
 
 **雙語課程 Bilingual Courses:**
@@ -40,12 +40,12 @@ Various activities are held to encourage students participation, such as English
 economics courses, classroom English and content knowledge are integrated to facilitate students learning.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh6.googleusercontent.com/RjOlyUiSg_wtcU4deW4gRC5oif0pHGPqFBTy6s4_xtogpH--x9qoCAYdio98XdwMbdMCIeYd8HIDpky-C2Mge4pP_ApRTMEclqq2uhCSiNTaxkmX0V7Bc9lTWBFGhW7St7HYkHHCwyWgKdjEboITR7rXnAPCCaWd5g6jx9qiKl46wBQJyPeO_Q=w1280" alt="Image 18" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh6.googleusercontent.com/d7fFBBX-D4DCSWUK5eFXS9vkCabPUYcjYMt0WUljzXhr-YiHc0pCNWDypjhvYT9pwxOrhuwYJcVpVgyZiYwxKvqvk3mOCVNGM3QWcBy1PDFsD9DrUCutrBHb2jp-icCwaO0DVE7d4hmbG5BQzx7ys7uhXUhuHMNaTEEIj6-mYCasDIgSLQtSkg=w1280" alt="Image 19" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/雙語課1.jpg' | relative_url }}" alt="雙語課程教學" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/雙語課2.webp' | relative_url }}" alt="雙語課程學習" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh4.googleusercontent.com/P1ZdWUPICrPinNGNBklEeIgmb3pPpAR7TpLFXAk-MjKNCA2awZCt8GrnUQW4bWaFFyZ59jA1aNgtLV5VUk-O7Ef-oSkN0_EDYZW-3xvKqUhlJ41dc6TOuP70zLrV7SdvFUKqMVAkK1_fwRa97UCtyFtUWmsIVWmRxC60rVkx59FeBOk8mHYPag=w1280" alt="Image 20" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_9106.JPG' | relative_url }}" alt="汐止國中教學活動" style="max-width: 100%;">
 </div>
 
 **建立雙語教學支持系統 Bilingual Teaching Support System :**
@@ -55,12 +55,12 @@ economics courses, classroom English and content knowledge are integrated to fac
 English teachers and content teachers discuss lesson plans and conduct classroom observations regularly.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh6.googleusercontent.com/QD7_dltcw3orB1TyGNr0f-6bsUt88WfPVK2ztoxcGh0RUomdJxqMmQonsWkJk2BuooitKMMz9belVSGrL9JiINtu018TZqRjE__k53bTR8nSYV74DeW1D5Vd8oV-4q7QDtakyjz-AxaEo4Y8JU2O1Kcqxmmh1KYFEYWyRAnvYI1Hzym70cT1vg=w1280" alt="Image 21" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh5.googleusercontent.com/6vqw-nnTmZJM97DZkTeJ5bpOETB5kecLekJ2sVJXOuuLo_O953Umsz0Mx7PK5Y4pNWUEUUeSTN1WFCCDgz1p67H15Ip3kuSVyXeNGqVp7sq8Hp6pYnR0Bf3sY_rutX6QMGNyyVfIER3bejFfn9it8sQVzrvs-ZGkj0NJf6S89icR6krddcyC4w=w1280" alt="Image 22" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_9447.JPG' | relative_url }}" alt="教師研習討論" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_9281.JPG' | relative_url }}" alt="課堂觀察交流" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh4.googleusercontent.com/tdL0hPw5edVXPZBaHyMhIvUFgkZejjsjlErYpJTgsB4TlBNhnb6J9RM50DEhJjoX0WJK2pLTE4-GW7ER87HitQryy7YL_Nb9KVQxoyBMCiZuQJLcWQMstY6X_gFoUoQIX0T-2xXxFcK4ZACnEfNXwX0CVoWWj0kRNKshiX9PD3OX2ayCDyd_iQ=w1280" alt="Image 23" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_8360.JPG' | relative_url }}" alt="教師專業成長" style="max-width: 100%;">
 </div>
 
 **雙語教師專業學習社群 Bilingual Teacher Learning Community :**
@@ -70,12 +70,12 @@ English teachers and content teachers discuss lesson plans and conduct classroom
 Teachers in learning community gather twice a week, improving ourselves through workshops, lectures and discussions.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh4.googleusercontent.com/Puy09AdybAL3ASnPAyJpK_ScwvrzButz19ZXSoDLeTC2LB0obnfBDTKxXjHoQSqSbvuqx3g3e7aOMeJ_pFW6ysQGYn1l-T1cmYrQoSGpBafA91Xh_55f-_4KjEb9sMymJt8TebKUj0hl1n2T8LUljN9HQuwhwj9Q_jOLAgx9cTPmPSApI42oKg=w1280" alt="Image 24" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh4.googleusercontent.com/kxOLdc4i1Wzpk8z6I-sTPh37ViC7cbR2m_05iFRwkWf7EmVKgTVjMa61rNgq85Y4qUummNee9NLssGAULLsIzr_5oFSdi5vVDfKWW8iCzcIw3EG9NyS4hIO_wp6K9R-yiLJU5AZ3Tn57nlQDJTfis0mIkf75MzdH-COQZ2g2B4i_b-gzEPcmsg=w1280" alt="Image 25" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/IMG_8359.JPG' | relative_url }}" alt="學習社群研討" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/活動2.JPG' | relative_url }}" alt="教師工作坊" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh5.googleusercontent.com/VRu00W5eIRaU_21W9n24Ig1VuWQImtG-WT1MRzb5ttEQx4KP0EuZ61rcehJXxdZQR5Jl6K9yuN2Do9nABWygRgdHhH8dmub-WwCee9aKiGcF0Gm_UWQYIxL9PKxSnQo5L5ouxj1LbpTbsXRvT3LduvN21gmiyQjj64vccl2lCB3x_zVGagSDow=w1280" alt="Image 26" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/汐止國中/原始照片/相片 2023-10-16 14 49 24.jpg' | relative_url }}" alt="汐止國中雙語教學成果" style="max-width: 100%;">
 </div>
 
 

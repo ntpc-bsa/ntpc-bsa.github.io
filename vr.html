@@ -4,6 +4,15 @@ title: VR科技
 permalink: /vr/
 ---
 
+<!-- 檢查是否有真實VR內容 -->
+{% assign has_vr = false %}
+{% for vr in site.vr %}
+    {% if vr.title and vr.title != "" %}
+        {% assign has_vr = true %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+
 <!-- 頁面標題 -->
 <section class="news-section">
     <div class="section-container">
@@ -15,44 +24,69 @@ permalink: /vr/
             本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
         </p>
         
-        <!-- VR科技內容網格 -->
-        <div class="lesson-grid" id="vrContainer">
+        <!-- 主要VR展示區域 - 完全隱藏直到有真實內容 -->
+        {% if has_vr %}
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <div style="width: 100%; height: 400px; background-color: #ddd; border-radius: 15px; position: relative; overflow: hidden;">
+                <!-- 輪播控制按鈕 -->
+                <button style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
+                    </svg>
+                </button>
+                <button style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                    </svg>
+                </button>
+                
+                <!-- 輪播指示器 -->
+                <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 1;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- 精選VR科技區塊 -->
+<section class="news-section">
+    <div class="section-container">
+        <div class="section-title">
+            <h2>精選VR科技 <span class="title-en">VR TECHNOLOGY</span></h2>
+            <button class="more-info-btn">MORE INFO</button>
+        </div>
+        
+        <!-- VR科技網格 -->
+        <div class="photo-gallery">
             {% for vr in site.vr %}
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">VR技術</div>
-                    <h3 class="lesson-title">{{ vr.title | default: "VR科技應用教學標題" }}</h3>
-                    <p class="lesson-description">{{ vr.excerpt | strip_html | truncate: 120 | default: "透過VR虛擬實境技術，提供學生沉浸式的學習體驗，結合雙語教學，創造創新的學習環境。" }}</p>
+            <article class="photo-item">
+                {% if vr.image %}
+                    <img src="{{ vr.image | relative_url }}" alt="{{ vr.title }}">
+                {% else %}
+                    <div style="width: 100%; height: 200px; background-color: #ddd; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                        <div style="font-size: 2rem; opacity: 0.3;">🥽</div>
+                    </div>
+                {% endif %}
+                <div class="photo-info">
+                    <h3 class="photo-title">{{ vr.title | default: "VR科技教學應用" }}</h3>
                 </div>
             </article>
             {% endfor %}
             
-            <!-- 如果沒有VR內容，添加示例內容進行測試 -->
-            {% if site.vr.size == 0 %}
-            {% for i in (1..12) %}
-            <article class="lesson-item">
-                <div class="lesson-image"></div>
-                <div class="lesson-content">
-                    <div class="lesson-category">VR技術</div>
-                    <h3 class="lesson-title">VR虛擬實境教學應用 {{ i }}</h3>
-                    <p class="lesson-description">運用最新VR技術打造沉浸式學習環境，讓學生透過虛擬實境體驗不同的學習情境，提升學習動機與成效。</p>
-                </div>
-            </article>
-            {% endfor %}
-            {% endif %}
-            
-            <!-- 空狀態提示（僅在無示例內容時顯示） -->
-            <div id="vrEmptyState" style="display: none; text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
+            <!-- 如果沒有VR內容，顯示提示信息 -->
+            {% unless has_vr %}
+            <div style="text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
                 <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">🥽</div>
                 <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有VR科技內容</h3>
                 <p style="line-height: 1.6;">創新的VR教學資源正在開發中，敬請期待！</p>
-                </div>
+            </div>
+            {% endunless %}
         </div>
-        
-        <!-- 分頁 -->
-        <nav class="pagination" id="vrPagination">
-            <!-- 動態生成分頁按鈕 -->
-        </nav>
     </div>
 </section> 

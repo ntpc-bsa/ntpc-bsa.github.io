@@ -376,6 +376,18 @@ body {
     transform: translateY(-5px);
 }
 
+/* 首頁新聞項目連結樣式 */
+.news-grid a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.news-grid a:hover .news-item {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
 .news-image {
     width: 100%;
     height: 200px;

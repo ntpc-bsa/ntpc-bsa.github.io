@@ -37,39 +37,39 @@ author: "林子皓"
 1 V 1 搶帶活動。
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh3.googleusercontent.com/xT9M4MnBlKS5zX2vw7CcAv3c0zgJnrH8AlPm8PP-EEN152_-1l1txr6yKanWL2oqAWre9JduVSKOWuyXW2aTnTm-tpLlt8vcPkRDjL5SHpk8_9AJlHHXpFxPhnMnA2KJ7mLZzceAmDdZtKdzkS_7UoJdNjJYyKu2jVVr_jWISPFRs29Lvn-IIA=w1280" alt="Image 14" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh5.googleusercontent.com/BiIbbWMjXoCPALRwg3zzPpiqLTC3PxMKx0BWCTSgeyBG8YwbSyl5f8n1SFvscUGR9Ge9qBu8QZDmpxFNS2Gr-yuMvgBW8yx3_5iSedIoZQ7gxoUMEsBNBt9KDS8ea74oOhaix_N87f6RoYE7vt1yoPRvU5DC_gxNmRoZgLgRgduzSS9p_LP3tg=w1280" alt="Image 15" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-體育課程-林子皓.jpg' | relative_url }}" alt="Tag Rugby 搶帶活動" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-表藝課程-何秭萱老師jpg.jpg' | relative_url }}" alt="中正國中雙語體育教學" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh5.googleusercontent.com/3xmz_h0TIhv5RKjsaesvnrG_XlKfEvrvUtFbEfgNt1Lf7czZhuqNwbzwfo52z5CzgrT3u3XepuJQJHbdxSh85NlAaaf2JtYtm4H2AbiV6Nak5n2aa3nrDucAd_8WQ8e6AINX7gB5cJu8ADLJaoP89RUwBndAX69THnBn0pM5OkzppDlDydf0oQ=w1280" alt="Image 16" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-健康教育王筱君.jpg' | relative_url }}" alt="橄欖球技能訓練" style="max-width: 100%;">
 </div>
 
 In the 111th school year, in addition to the art field (visual and expressive arts) continued to be extended to grade 8, the physical fitness field (health education, physical education) was added to implement bilingualism in grade 7, so that more teachers and subjects can participate, and students will have more opportunities to get in touch with English courses. For the 112th academic year, the bilingual curriculum in the fields of arts and fitness has been continued, allowing students to continue to immerse themselves in a bilingual curriculum environment.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh3.googleusercontent.com/s4xFxRB6pNyeuG-vdkxeao3072w9lVPU0ZqcJwoRGtgzyZOCZB0mjHoQ0-kjXzXZV985tx6gG43wz_QFXagi5sAdGmya2HTE9pDr0GW_jIKQsfX7FlkODPqaa72eH4XEISryCw-TtUtcOWo50UZWZov6wA4O25jkqEZ8IJG18VdElAA4lhmjuQ=w1280" alt="Image 17" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh5.googleusercontent.com/6SsGmjDygd5sfGBxBJsjTf0WNbAyx_OtdUZdCE6A63VA40QA_GZIJcyg9dXdONUY03NRJTSZJTfQLeedewZiTYNaaVFVyebnpWrmkGploa1ApKy294BKY6d4wfmlahmpUycZCRWgGiI5QZepq-WOzouvRyFVyDc1Vvk29YQ8u47Hy6EAf08vqg=w1280" alt="Image 18" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中-視覺藝術-許嫚真老師4.jpg' | relative_url }}" alt="藝術健體領域雙語課程" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/中正國中外師Crisel.jpg' | relative_url }}" alt="雙語教學環境營造" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh6.googleusercontent.com/waK8WxNdUkHTbv__Z6MPkqIRd1P5spPGYemaoSx44EzKiGUCWr4NtAASar5ap_FNXyW09XSm7mtTGnp2X1lQIQHLbXqbozL1NJRC5FhJHRDW3LAKr2YZuYx3e2YuBf-Iu8iiAR7a-nrW3I0QwTHARDOp8OI6fbJ_1mgdMuWaK-pEaS_EX6taZQ=w1280" alt="Image 19" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/外師教師情境布置1.jpg' | relative_url }}" alt="中正國中雙語課程推廣" style="max-width: 100%;">
 </div>
 
 In addition, for the promotion of bilingual courses, from 110 to 113, students will apply for a bilingual digital buddy and communicate online with a university buddy from the English Department of Fu Jen University. American college students serve as student companions to lead students to systematically and repeatedly practice English listening and speaking skills. In the summer, the all-English experience camp will be held in Taiwan, where international students will experience life in English with students through games and courses, and at the same time prepare special reports for the forum, and meet the challenges of the stage report with the children.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh4.googleusercontent.com/OnfofaPc1-lO0P-zj_3jsGK0O3sANIFRe9joyPz2VuDDpskQHaJu_cTD-eef4C20AoeHlueszuu1Clyay0OuXfVn-nCCOAv_6nwmXn_Fu0kq6FIEpuwuUC9PBsYoIQknqr7n97Cx4ifjxZzNWtQRbGa22aYpAN5581Jqmkq45zNKflxtuA5XHw=w1280" alt="Image 20" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh4.googleusercontent.com/V4wQL03lYAbVQTiMvh0Hi78NygmMF-GWfue2-yntMWzVyjKJemCxHWHcrgI5hPVMGA4XQziYWk1n4QE9aHO4nYzZaxmzMbZs3uyrdi_MifRsuWtAecxhQ7ZMp1lZmBO37FnhFCv2HNaIjA22ZRQ8zbBqRWspcQNRf3rIqm4UZ_7l1969R_T2_A=w1280" alt="Image 21" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/表藝課程_112-2課程照片_240415_6.jpg' | relative_url }}" alt="雙語數位學伴課程" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/體育雙語增能研習.jpg' | relative_url }}" alt="英語體驗營活動" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="https://lh3.googleusercontent.com/m_ZF0-_HDuI0rG-AFeLrmCG893rTagyBFanbfAvs5y5PyNK_3FqDVzSpyiJ12xkFHvo1-zQjIXl7LFikJadAoCxwAOX3bGOA4NQkRKfdDtczescQ6GO8p0Zt1EH26lofpoZjr2cRgMw4fo1TH6FtbVpUKhxVf0jdofax7zVBZ9Kf54CnoJKYfw=w1280" alt="Image 22" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="https://lh5.googleusercontent.com/mng46ehNUb-6FFXDY2wYv9TWIUrOh39Sn8T6QMdRnfmOxtxILcCjlyOeWpYMKPyqEny1h-rXTQ7ATMaFEY1CH80gQgFZI3dpSD4hEku6K8uZ3gVJwmZCyC-ZHm8DFVLfO1pl23GYZOiQSI4lBsSFvr65rOqCi2imzxa8xUwP1h7l8pJNAdYLlQ=w1280" alt="Image 23" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/國際志工.jpg' | relative_url }}" alt="國際學生互動交流" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/國際志工9.jpg' | relative_url }}" alt="英語成果發表" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="https://lh6.googleusercontent.com/gSxlO6Pe6DOCC1GP_CLJ_K7X8ZKERWw0828QJtqueWhyUzjFLDsil7VTuLlHlN4pQGfxJmlbMrGwgeffoOlp_7Px_5xlc_PGgI8wlP2d3ftqCFW_vb0u8nPY-oouywENA3l0l27jj6o-0Zp5CDUxAwEBNymUSjauAA94lSeQtjd5tPv9xLI=w1280" alt="Image 24" style="max-width: 100%;">
+    <img src="{{ '/assets/images/lessons/2024/中正國中/原始照片/全民英檢中級通過.jpg' | relative_url }}" alt="中正國中雙語教學成果" style="max-width: 100%;">
 </div>
 
 
