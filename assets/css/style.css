@@ -848,7 +848,7 @@ body {
 /* 教案頁面 */
 .lesson-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -1085,6 +1085,14 @@ body {
 
 .back-to-top.show {
     display: flex;
+}
+
+/* 平板電腦 - 兩欄顯示 */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .lesson-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 /* 響應式設計 */
