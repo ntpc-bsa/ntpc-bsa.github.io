@@ -39,18 +39,18 @@ title: 首頁
             {% assign sorted_lessons = site.lessons | sort: 'date' | reverse %}
             {% for lesson in sorted_lessons limit:3 %}
             <a href="{{ lesson.url | relative_url }}" style="text-decoration: none; color: inherit;">
-                <article class="news-item">
-                    <div class="news-image">
+            <article class="news-item">
+                <div class="news-image">
                         {% if lesson.content contains '<img' %}
                             {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
                             <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
                         {% endif %}
-                    </div>
-                    <div class="news-content">
+                </div>
+                <div class="news-content">
                         <h3 class="news-title">{{ lesson.title }}</h3>
                         <p class="news-excerpt">{{ lesson.excerpt | strip_html | truncate: 80 }}</p>
-                    </div>
-                </article>
+                </div>
+            </article>
             </a>
             {% endfor %}
             
@@ -66,7 +66,7 @@ title: 首頁
                 </div>
             </article>
             {% endfor %}
-        </div>
+                </div>
         {% else %}
         <!-- 沒有教案內容時的提示 -->
         <div style="text-align: center; padding: 4rem 2rem; color: #666;">

@@ -251,7 +251,7 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
     initializeApp();
-}
+} 
 
 // 動態分頁功能
 class DynamicPagination {
@@ -387,8 +387,5 @@ class DynamicPagination {
 
 // 初始化分頁功能
 document.addEventListener('DOMContentLoaded', function() {
-    // VR科技頁面分頁  
-    if (document.getElementById('vrContainer')) {
-        new DynamicPagination('vrContainer', 'vrPagination', 8);
-    }
+    // 分頁功能已準備就緒
 }); 

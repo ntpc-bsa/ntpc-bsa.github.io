@@ -19,7 +19,7 @@ permalink: /lessons/
         <div class="lesson-list" id="lessonsContainer">
             {% for lesson in site.lessons %}
             <a href="{{ lesson.url | relative_url }}" class="lesson-link">
-                <article class="lesson-item">
+            <article class="lesson-item">
                     <div class="lesson-image">
                         {% if lesson.content contains '<img' %}
                             {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
@@ -31,12 +31,12 @@ permalink: /lessons/
                             </div>
                         {% endif %}
                     </div>
-                    <div class="lesson-content">
+                <div class="lesson-content">
                         <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
                         <h3 class="lesson-title">{{ lesson.title | default: "課程標題" }}</h3>
                         <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 150 | default: "課程說明將會顯示在這裡。" }}</p>
-                    </div>
-                </article>
+                </div>
+            </article>
             </a>
             {% endfor %}
             

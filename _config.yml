@@ -18,9 +18,6 @@ collections:
   photos:
     output: true
     permalink: /:collection/:name/
-  vr:
-    output: true
-    permalink: /:collection/:name/
 
 # Defaults
 defaults:
@@ -39,11 +36,6 @@ defaults:
       type: "photos"
     values:
       layout: "photo"
-  - scope:
-      path: ""
-      type: "vr"
-    values:
-      layout: "vr"
 
 # Exclude from processing
 exclude:
