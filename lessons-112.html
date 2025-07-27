@@ -1,0 +1,57 @@
+---
+layout: default
+title: 112 學年度
+permalink: /lessons/112/
+---
+
+<!-- 頁面標題 -->
+<section class="news-section">
+    <div class="section-container">
+        <div class="section-title">
+            <h1>112 學年度 <span class="title-en">112 ACADEMIC YEAR</span></h1>
+        </div>
+        
+        <p style="margin-bottom: 3rem; color: #666; line-height: 1.8;">
+            112學年度雙語教學教案分享，展現各校在雙語教育方面的創新教學設計與實施成果。
+        </p>
+        
+        <!-- 教案列表 -->
+        <div class="lesson-list" id="lessonsContainer">
+            {% assign filtered_lessons = site.lessons | where: "academic_year", "112" %}
+            {% for lesson in filtered_lessons %}
+            <a href="{{ lesson.url | relative_url }}" class="lesson-link">
+            <article class="lesson-item">
+                    <div class="lesson-image">
+                        {% if lesson.content contains '<img' %}
+                            {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
+                            <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {% else %}
+                            <div class="lesson-image-placeholder">
+                                <div class="lesson-icon">📚</div>
+                                <div class="lesson-school">{{ lesson.title | split: ' ' | first }}</div>
+                            </div>
+                        {% endif %}
+                    </div>
+                <div class="lesson-content">
+                        <div class="lesson-category">{{ lesson.academic_year }}學年度</div>
+                        <h3 class="lesson-title">{{ lesson.title | default: "課程標題" }}</h3>
+                        <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 150 | default: "課程說明將會顯示在這裡。" }}</p>
+                </div>
+            </article>
+            </a>
+            {% endfor %}
+            
+            <!-- 如果沒有112學年度的教案，顯示提示訊息 -->
+            {% if filtered_lessons.size == 0 %}
+            <div style="text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
+                <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📚</div>
+                <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有112學年度的教案</h3>
+                <p style="line-height: 1.6;">我們正在整理112學年度的教案內容，敬請期待！</p>
+                <a href="{{ '/lessons/' | relative_url }}" style="display: inline-block; margin-top: 1rem; padding: 0.8rem 1.5rem; background-color: var(--primary-green); color: white; text-decoration: none; border-radius: 5px;">查看全部教案</a>
+            </div>
+            {% endif %}
+        </div>
+        
+
+    </div>
+</section> 

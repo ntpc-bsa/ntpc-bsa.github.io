@@ -4,15 +4,6 @@ title: 活動照片
 permalink: /photos/
 ---
 
-<!-- 檢查是否有真實照片內容 -->
-{% assign has_photos = false %}
-{% for photo in site.photos %}
-    {% if photo.image and photo.image != "" %}
-        {% assign has_photos = true %}
-        {% break %}
-    {% endif %}
-{% endfor %}
-
 <!-- 頁面標題 -->
 <section class="news-section">
     <div class="section-container">
@@ -24,67 +15,137 @@ permalink: /photos/
             本年度計畫在「行政國際」、「課程發展」、「教學實施」、「學生表現」及「學校成長」等五項度訂定發展目標，並籌劃協助學校整設學校跨域的學習機制，以期提升英語學習機趣和效果並建立新的雙語教學體系統，以落實推廣雙語學習之參考依據。
         </p>
         
-        <!-- 主要照片展示區域 - 完全隱藏直到有真實照片 -->
-        {% if has_photos %}
-        <div style="text-align: center; margin-bottom: 4rem;">
-            <div style="width: 100%; height: 400px; background-color: #ddd; border-radius: 15px; position: relative; overflow: hidden;">
-                <!-- 輪播控制按鈕 -->
-                <button style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/>
-                    </svg>
-                </button>
-                <button style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; z-index: 10;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
-                    </svg>
-                </button>
+        <!-- 照片輪播展示區域 -->
+        <div class="photo-carousel-container">
+            <div class="photo-carousel-wrapper">
+                <!-- 輪播照片範例 - 請將您的照片放在 assets/images/carousel/ 資料夾中 -->
+                <!-- 
+                範例格式：
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/您的照片檔案.jpg' | relative_url }}" alt="照片描述">
+                    <div class="photo-carousel-caption">
+                        <h3>照片標題</h3>
+                        <p>照片描述</p>
+                    </div>
+                </div>
+                -->
                 
-                <!-- 輪播指示器 -->
-                <div style="position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem;">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 1;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background-color: white; opacity: 0.5;"></div>
+                <!-- 使用您上傳的新照片 -->
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05748.jpg' | relative_url }}" alt="雙語教學活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05754.jpg' | relative_url }}" alt="國際交流活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05843.jpg' | relative_url }}" alt="教師研習活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05869.jpg' | relative_url }}" alt="學生成果展示">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05917.jpg' | relative_url }}" alt="外師教學">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05928.jpg' | relative_url }}" alt="雙語課程活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC05955.jpg' | relative_url }}" alt="國際志工服務">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06018.jpg' | relative_url }}" alt="雙語教學成果">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06086.jpg' | relative_url }}" alt="學校特色活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06161.jpg' | relative_url }}" alt="國際文化交流">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06273.jpg' | relative_url }}" alt="雙語教學研習">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06363.jpg' | relative_url }}" alt="學生學習活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06422.jpg' | relative_url }}" alt="教學成果展示">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06433.jpg' | relative_url }}" alt="國際教育活動">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC06450.jpg' | relative_url }}" alt="雙語教學實踐">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07585.jpg' | relative_url }}" alt="教師專業發展">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07650.jpg' | relative_url }}" alt="學生國際視野">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07683.jpg' | relative_url }}" alt="雙語課程創新">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07726.jpg' | relative_url }}" alt="國際合作交流">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07779.jpg' | relative_url }}" alt="雙語教學成果展">
+                </div>
+                
+                <div class="photo-carousel-slide">
+                    <img src="{{ '/assets/images/carousel/DSC07836.jpg' | relative_url }}" alt="國際教育推廣">
                 </div>
             </div>
+            
+            <!-- 輪播控制按鈕 -->
+            <button class="photo-carousel-btn-prev" onclick="movePhotoCarousel(-1)">❮</button>
+            <button class="photo-carousel-btn-next" onclick="movePhotoCarousel(1)">❯</button>
+            
+            <!-- 輪播指示器 -->
+            <div class="photo-carousel-indicators">
+                <span class="photo-carousel-dot active" onclick="goToPhotoSlide(1)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(2)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(3)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(4)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(5)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(6)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(7)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(8)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(9)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(10)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(11)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(12)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(13)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(14)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(15)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(16)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(17)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(18)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(19)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(20)"></span>
+                <span class="photo-carousel-dot" onclick="goToPhotoSlide(21)"></span>
+            </div>
         </div>
-        {% endif %}
     </div>
 </section>
 
-<!-- 精選相簿區塊 -->
-<section class="news-section">
-    <div class="section-container">
-        <div class="section-title">
-            <h2>精選相簿 <span class="title-en">PHOTO</span></h2>
-            <button class="more-info-btn">MORE INFO</button>
-        </div>
-        
-        <!-- 照片網格 -->
-        <div class="photo-gallery">
-            {% for photo in site.photos %}
-            <article class="photo-item">
-                {% if photo.image %}
-                    <img src="{{ photo.image | relative_url }}" alt="{{ photo.title }}">
-                {% else %}
-                    <div style="width: 100%; height: 200px; background-color: #ddd;"></div>
-                {% endif %}
-                <div class="photo-info">
-                    <h3 class="photo-title">{{ photo.title | default: "新北市國中雙語策略聯盟成果展" }}</h3>
-                </div>
-            </article>
-            {% endfor %}
-            
-            <!-- 如果沒有照片，顯示提示信息 -->
-            {% unless has_photos %}
-            <div style="text-align: center; padding: 4rem 2rem; color: #666; grid-column: 1 / -1;">
-                <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">📸</div>
-                <h3 style="margin-bottom: 1rem; color: #333;">目前還沒有活動照片</h3>
-                <p style="line-height: 1.6;">精彩的活動照片即將上線，敬請期待！</p>
-                </div>
-            {% endunless %}
-        </div>
-    </div>
-</section> 
+<script src="{{ '/assets/js/photo-carousel.js' | relative_url }}"></script> 

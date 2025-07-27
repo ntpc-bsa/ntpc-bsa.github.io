@@ -21,18 +21,38 @@ permalink: /lessons/
             <a href="{{ lesson.url | relative_url }}" class="lesson-link">
             <article class="lesson-item">
                     <div class="lesson-image">
-                        {% if lesson.content contains '<img' %}
-                            {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
-                            <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {% assign academic_year = lesson.academic_year | default: "112" %}
+                        {% if academic_year == "113" %}
+                            {% assign school_name = lesson.title | split: " " | first %}
+                            {% if school_name == "中平國中" %}
+                                {% if lesson.title contains "表藝科" %}
+                                    {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img1.jpg" %}
+                                {% else %}
+                                    {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img.jpg" %}
+                                {% endif %}
+                                <img src="{{ preview_path | relative_url }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% elsif school_name contains "國中" or school_name contains "高中" %}
+                                {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img.jpg" %}
+                                <img src="{{ preview_path | relative_url }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% else %}
+                                {% assign school_name = lesson.title | split: " " | slice: 0, 2 | join: " " %}
+                                {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img.jpg" %}
+                                <img src="{{ preview_path | relative_url }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% endif %}
                         {% else %}
-                            <div class="lesson-image-placeholder">
-                                <div class="lesson-icon">📚</div>
-                                <div class="lesson-school">{{ lesson.title | split: ' ' | first }}</div>
-                            </div>
+                            {% if lesson.content contains '<img' %}
+                                {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
+                                <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% else %}
+                                <div class="lesson-image-placeholder">
+                                    <div class="lesson-icon">📚</div>
+                                    <div class="lesson-school">{{ lesson.title | split: ' ' | first }}</div>
+                                </div>
+                            {% endif %}
                         {% endif %}
                     </div>
                 <div class="lesson-content">
-                        <div class="lesson-category">{{ lesson.category | default: "分類" }}</div>
+                        <div class="lesson-category">{{ lesson.academic_year | default: "學年度" }}學年度</div>
                         <h3 class="lesson-title">{{ lesson.title | default: "課程標題" }}</h3>
                         <p class="lesson-description">{{ lesson.excerpt | strip_html | truncate: 150 | default: "課程說明將會顯示在這裡。" }}</p>
                 </div>

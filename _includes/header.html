@@ -37,11 +37,17 @@
                                 <span class="nav-link-en">ABOUT</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{ '/lessons/' | relative_url }}" class="nav-link">
+                        <li class="nav-item dropdown">
+                            <a href="{{ '/lessons/' | relative_url }}" class="nav-link dropdown-toggle">
                                 <span class="nav-text">教案分享</span>
                                 <span class="nav-link-en">LESSON PLAN</span>
+                                <span class="dropdown-arrow">▼</span>
                             </a>
+                            <ul class="dropdown-menu-sub">
+                                <li><a href="{{ '/lessons/' | relative_url }}">全部教案</a></li>
+                                <li><a href="{{ '/lessons/112/' | relative_url }}">112 學年度</a></li>
+                                <li><a href="{{ '/lessons/113/' | relative_url }}">113 學年度</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="{{ '/photos/' | relative_url }}" class="nav-link">

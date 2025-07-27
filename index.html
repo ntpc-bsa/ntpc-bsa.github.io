@@ -41,7 +41,17 @@ title: 首頁
             <a href="{{ lesson.url | relative_url }}" style="text-decoration: none; color: inherit;">
             <article class="news-item">
                 <div class="news-image">
-                        {% if lesson.content contains '<img' %}
+                        {% if lesson.academic_year == "113" %}
+                            {% assign school_name = lesson.title | split: " " | first %}
+                            {% if school_name contains "國中" or school_name contains "高中" %}
+                                {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img.jpg" %}
+                                <img src="{{ preview_path | relative_url }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% else %}
+                                {% assign school_name = lesson.title | split: " " | slice: 0, 2 | join: " " %}
+                                {% assign preview_path = "/assets/images/lessons/113/preview/" | append: school_name | append: "/img.jpg" %}
+                                <img src="{{ preview_path | relative_url }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                            {% endif %}
+                        {% elsif lesson.content contains '<img' %}
                             {% assign first_img = lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
                             <img src="{{ first_img }}" alt="{{ lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
                         {% endif %}
@@ -85,34 +95,21 @@ title: 首頁
             <h2>焦點新聞 <span class="title-en">NEWS</span></h2>
         </div>
         
-        {% if site.lessons.size > 0 %}
-        <!-- 焦點教案展示 -->
-        {% assign sorted_lessons = site.lessons | sort: 'date' | reverse %}
-        {% assign featured_lesson = sorted_lessons.first %}
+        <!-- 焦點新聞內容 -->
         <div class="featured-news">
             <div class="featured-image">
-                {% if featured_lesson.content contains '<img' %}
-                    {% assign first_img = featured_lesson.content | split: '<img' | last | split: 'src="' | last | split: '"' | first %}
-                    <img src="{{ first_img }}" alt="{{ featured_lesson.title }}" style="width: 100%; height: 100%; object-fit: cover;">
-                {% endif %}
+                <img src="{{ '/assets/images/carousel/DSC07726.jpg' | relative_url }}" alt="新北市雙語策略聯盟成果展" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="featured-content">
-                <h3 class="featured-title">{{ featured_lesson.title }}</h3>
+                <h3 class="featured-title">新北雙語策略聯盟成果展登場</h3>
+                <h4 class="featured-subtitle">13校67件創新教案、10堂公開課 展現雙語教育跨域實力</h4>
                 <p class="featured-text">
-                    {{ featured_lesson.excerpt | strip_html | truncate: 200 | default: "透過創新的教案設計，結合雙語教學策略，我們致力於為學生創造更豐富的學習體驗，提升英語學習效能，並建立新的雙語教學學習教育系統。" }}
+                    新北市雙語策略聯盟成果展展出67件創新教案與10堂動態課程，結合科技與跨校合作，強化學生英語表達、跨文化理解與國際素養，展現2030雙語政策的推動成果與教育前瞻性。
                 </p>
-                <a href="{{ featured_lesson.url | relative_url }}" class="featured-btn">MORE INFO</a>
+                <a href="https://www.ntpc.edu.tw/home.jsp?id=d127e0ce0f4f407b&act=be4f48068b2b0031&dataserno=85d9061c2f71e7814e79c6bacd345901&mserno=cdfca8f4e3eeb6df81e43a5af771c42f" class="featured-btn" target="_blank">
+                    了解更多
+                </a>
             </div>
         </div>
-        {% else %}
-        <!-- 沒有教案時的提示 -->
-        <div style="text-align: center; padding: 4rem 2rem; color: #666;">
-            <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.3;">🌟</div>
-            <h3 style="margin-bottom: 1rem; color: #333;">焦點教案準備中</h3>
-            <p style="line-height: 1.6; max-width: 600px; margin: 0 auto;">
-                我們正在精心策劃更多精彩的焦點教案，為您帶來更豐富的雙語教學體驗。
-            </p>
-        </div>
-        {% endif %}
     </div>
 </section>
