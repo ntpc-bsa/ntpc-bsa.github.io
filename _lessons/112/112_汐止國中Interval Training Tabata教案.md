@@ -42,7 +42,7 @@ economics courses, classroom English and content knowledge are integrated to fac
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
     <img src="{{ '/assets/images/lessons/112/汐止國中/雙語課1.jpg' | relative_url }}" alt="雙語課程教學" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/雙語課2.webp' | relative_url }}" alt="雙語課程學習" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/雙語課2.png' | relative_url }}" alt="雙語課程學習" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">

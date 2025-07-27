@@ -22,7 +22,7 @@ author: "王苡倫、陳玟光、Robert Temple"
 ▶ Bilingual Counseling Education incorporates collaborative learning and provides differentiated tasks based on students’ language proficiency levels.
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/二重國中/1.webp' | relative_url }}" alt="雙語輔導教育協作學習" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/二重國中/1.png' | relative_url }}" alt="雙語輔導教育協作學習" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 ▶ Bilingual Musical Education utilizes strategies activities to invoke motivation and rewards to encourage learning.
