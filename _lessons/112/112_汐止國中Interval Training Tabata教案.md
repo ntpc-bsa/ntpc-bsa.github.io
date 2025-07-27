@@ -46,7 +46,7 @@ economics courses, classroom English and content knowledge are integrated to fac
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9106.JPG' | relative_url }}" alt="汐止國中教學活動" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9106.jpg' | relative_url }}" alt="汐止國中教學活動" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 **建立雙語教學支持系統 Bilingual Teaching Support System :**
@@ -56,12 +56,12 @@ economics courses, classroom English and content knowledge are integrated to fac
 English teachers and content teachers discuss lesson plans and conduct classroom observations regularly.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9447.JPG' | relative_url }}" alt="教師研習討論" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9281.JPG' | relative_url }}" alt="課堂觀察交流" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9447.jpg' | relative_url }}" alt="教師研習討論" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_9281.jpg' | relative_url }}" alt="課堂觀察交流" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_8360.JPG' | relative_url }}" alt="教師專業成長" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_8360.jpg' | relative_url }}" alt="教師專業成長" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 **雙語教師專業學習社群 Bilingual Teacher Learning Community :**
@@ -71,8 +71,8 @@ English teachers and content teachers discuss lesson plans and conduct classroom
 Teachers in learning community gather twice a week, improving ourselves through workshops, lectures and discussions.
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_8359.JPG' | relative_url }}" alt="學習社群研討" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/汐止國中/活動2.JPG' | relative_url }}" alt="教師工作坊" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/IMG_8359.jpg' | relative_url }}" alt="學習社群研討" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/汐止國中/活動2.jpg' | relative_url }}" alt="教師工作坊" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="margin-bottom: 10px;">
