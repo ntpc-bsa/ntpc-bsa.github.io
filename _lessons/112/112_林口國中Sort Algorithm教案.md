@@ -27,18 +27,18 @@ author: "周佑庭"
 </div>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/03.JPG' | relative_url }}" alt="學生體育課程參與" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/04.JPG' | relative_url }}" alt="雙語教學互動" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/03.jpg' | relative_url }}" alt="學生體育課程參與" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/04.jpg' | relative_url }}" alt="雙語教學互動" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/05.JPG' | relative_url }}" alt="林口國中雙語體育課程" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/06.JPG' | relative_url }}" alt="體育技能教學展示" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/05.jpg' | relative_url }}" alt="林口國中雙語體育課程" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/06.jpg' | relative_url }}" alt="體育技能教學展示" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/07.JPG' | relative_url }}" alt="學生運動技能練習" style="flex: 1; min-width: 48%; object-fit: cover;">
-    <img src="{{ '/assets/images/lessons/112/林口國中/08.JPG' | relative_url }}" alt="林口國中體育課程成果" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/07.jpg' | relative_url }}" alt="學生運動技能練習" style="flex: 1; min-width: 48%; object-fit: cover;">
+    <img src="{{ '/assets/images/lessons/112/林口國中/08.jpg' | relative_url }}" alt="林口國中體育課程成果" style="flex: 1; min-width: 48%; object-fit: cover;">
 </div>
 
 
