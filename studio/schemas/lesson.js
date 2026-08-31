@@ -25,7 +25,7 @@ function currentAcademicYear() {
 }
 
 /**
- * 學年度下拉選單的選項，從「目前學年度 + 1」往回列到 112。
+ * 學年度可選的年份，從「目前學年度 + 1」往回列到 112。
  *
  * 這個清單是在後台每次載入時即時算出來的，所以每年都會自動多出新的年度，
  * 不需要改程式、也不需要重新部署後台。多給一年是為了讓下個學年度可以提前準備。
@@ -87,7 +87,9 @@ export default defineType({
       title: '學年度',
       type: 'string',
       group: 'basic',
-      options: {list: academicYearOptions(), layout: 'dropdown'},
+      // 用 radio 而非 dropdown：dropdown 一定會多一個空白的「未選擇」項目，
+      // 這個欄位是必填的，那個選項只會讓人誤填。
+      options: {list: academicYearOptions(), layout: 'radio', direction: 'horizontal'},
       initialValue: String(currentAcademicYear()),
       description:
         '選單每年會自動往後延伸（含下一學年度），不需要找工程師新增。' +
