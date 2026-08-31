@@ -5,7 +5,6 @@ url: "https://ntpc-bsa.github.io"
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -45,4 +44,17 @@ exclude:
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
-  - vendor/ruby/ 
+  - vendor/ruby/
+  # 後台與建置工具，不屬於網站內容
+  - studio/
+  - scripts/
+  - package.json
+  - package-lock.json
+  - .env
+  - .env.example
+  - README.md
+  - DEPLOY.md
+  - ADMIN_GUIDE.md
+  - ADOBE_FONTS_SETUP.md
+  - PHOTO_CAROUSEL_GUIDE.md
+  - PHOTO_UPLOAD_INSTRUCTIONS.md 

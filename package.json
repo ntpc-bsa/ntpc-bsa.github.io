@@ -1,0 +1,25 @@
+{
+  "name": "ntpc-bsa-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "新北市雙語策略聯盟官網 — Sanity 內容拉取與 Jekyll 建置",
+  "type": "module",
+  "scripts": {
+    "lessons": "node scripts/build-lessons.mjs",
+    "build": "node scripts/build-lessons.mjs && bundle exec jekyll build",
+    "verify": "node scripts/verify-roundtrip.mjs && node scripts/verify-build.mjs",
+    "migrate:dry": "node scripts/migrate-to-sanity.mjs --dry-run",
+    "migrate": "node scripts/migrate-to-sanity.mjs"
+  },
+  "dependencies": {
+    "@portabletext/to-html": "^2.0.13",
+    "@sanity/client": "^6.22.2",
+    "@sanity/image-url": "^1.1.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

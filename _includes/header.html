@@ -45,8 +45,13 @@
                             </a>
                             <ul class="dropdown-menu-sub">
                                 <li><a href="{{ '/lessons/' | relative_url }}">全部教案</a></li>
-                                <li><a href="{{ '/lessons/112/' | relative_url }}">112 學年度</a></li>
-                                <li><a href="{{ '/lessons/113/' | relative_url }}">113 學年度</a></li>
+                                {%- comment -%}
+                                學年度清單由 scripts/build-lessons.mjs 依 Sanity 的資料寫進 _data/years.yml，
+                                新增學年度不需要改這裡。
+                                {%- endcomment -%}
+                                {% for y in site.data.years %}
+                                <li><a href="{{ '/lessons/' | append: y.year | append: '/' | relative_url }}">{{ y.year }} 學年度</a></li>
+                                {% endfor %}
                             </ul>
                         </li>
                         <li class="nav-item">
