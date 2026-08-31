@@ -41,6 +41,13 @@
 
 `scripts/build-lessons.mjs` 只會刪除帶有上述標記的檔案，手寫的檔案不會被動到。
 
+## 分支配置
+
+| 分支 | 用途 |
+|---|---|
+| `main` | 網站原始碼。推上去就會建置並部署到 Cloudflare Pages |
+| `redirect` | 只放導轉頁，GitHub Pages 的發布來源，讓舊網址 `ntpc-bsa.github.io` 逐頁導到新站 |
+
 ## 開工前：本機分支狀態
 
 這個工作目錄的 `main` 曾經落後遠端 6 個 commit，而遠端被 force-push 過

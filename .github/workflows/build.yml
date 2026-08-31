@@ -1,13 +1,12 @@
 # 從 Sanity 取得教案 → 用 Jekyll 建置 → 部署到 Cloudflare Pages。
 #
-# 刻意不掛在 main 上：main 仍然是 GitHub Pages（legacy 模式）的來源，
-# 也就是目前線上的 ntpc-bsa.github.io。這條流程跑在 sanity-cms 分支，
-# 兩邊互不影響，等新站驗證無誤再決定何時切換。
+# ntpc-bsa.github.io 已改由 redirect 分支提供導轉頁，
+# 所以 main 回到專案主線：推上 main 就會建置並部署到 Cloudflare Pages。
 name: Build and deploy
 
 on:
   push:
-    branches: [sanity-cms]
+    branches: [main]
   # Sanity 的 webhook 可以打 repository_dispatch 觸發（event_type 填 sanity-publish）
   repository_dispatch:
     types: [sanity-publish]
@@ -17,9 +16,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 不指定 ref，直接取觸發這次執行的分支
       - uses: actions/checkout@v4
-        with:
-          ref: sanity-cms
 
       - uses: ruby/setup-ruby@v1
         with:
