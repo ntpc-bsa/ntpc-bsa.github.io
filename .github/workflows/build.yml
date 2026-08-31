@@ -1,0 +1,56 @@
+# 從 Sanity 取得教案 → 用 Jekyll 建置 → 部署到 Cloudflare Pages。
+#
+# 刻意不掛在 main 上：main 仍然是 GitHub Pages（legacy 模式）的來源，
+# 也就是目前線上的 ntpc-bsa.github.io。這條流程跑在 sanity-cms 分支，
+# 兩邊互不影響，等新站驗證無誤再決定何時切換。
+name: Build and deploy
+
+on:
+  push:
+    branches: [sanity-cms]
+  # Sanity 的 webhook 可以打 repository_dispatch 觸發（event_type 填 sanity-publish）
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: sanity-cms
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - name: 從 Sanity 產生教案檔案
+        env:
+          SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID }}
+          SANITY_DATASET: production
+        run: node scripts/build-lessons.mjs
+
+      - run: bundle exec jekyll build
+
+      - name: 檢查產出
+        run: |
+          echo "教案頁數：$(find _site/lessons -name index.html | wc -l)"
+          test -f _site/index.html || { echo "缺少首頁"; exit 1; }
+          test -d _site/lessons || { echo "缺少 lessons 目錄"; exit 1; }
+
+      - name: 部署到 Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Direct Upload 專案的 branch 只是標籤；用 main 才會發布到正式網址
+          command: pages deploy _site --project-name=ntpc-bsa --branch=main
