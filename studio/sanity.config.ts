@@ -17,14 +17,19 @@ export default defineConfig({
 
   plugins: [
     structureTool({
-      structure: (S, context) =>
+      // list 與 listItem 都必須給 id，少了會出現「`id` is required for lists」
+      structure: (S) =>
         S.list()
+          .id('root')
           .title('內容')
           .items([
             S.listItem()
+              .id('lessons')
               .title('教案（依學年度）')
+              .schemaType('lesson')
               .child(
                 S.documentTypeList('lesson')
+                  .id('lessonList')
                   .title('教案')
                   .defaultOrdering([
                     {field: 'academicYear', direction: 'desc'},
