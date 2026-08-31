@@ -1,6 +1,8 @@
 # 教案後台操作說明（承辦人版）
 
-後台網址：<https://ntpc-bsa.sanity.studio>
+後台網址：<https://ntpc-bsa.pages.dev/admin>
+（記不住的話就是「網站網址後面加 `/admin`」，會自動轉到後台。）
+
 用受邀的 Google 帳號登入即可，不需要另外記密碼。
 
 左側是這樣分的：
