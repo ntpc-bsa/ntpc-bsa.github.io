@@ -88,18 +88,30 @@ export default defineConfig({
           .id('root')
           .title('內容')
           .items([
-            ...yearItems,
+            // 教案底下再依學年度分資料夾：/教案/113 學年度
             S.listItem()
-              .id('allLessons')
-              .title('全部教案')
+              .id('lessons')
+              .title('教案')
               .schemaType('lesson')
               .child(
-                S.documentTypeList('lesson')
-                  .id('allLessonList')
-                  .title('全部教案')
-                  .defaultOrdering([
-                    {field: 'academicYear', direction: 'desc'},
-                    {field: 'date', direction: 'desc'},
+                S.list()
+                  .id('lessonsByYear')
+                  .title('教案')
+                  .items([
+                    S.listItem()
+                      .id('allLessons')
+                      .title('全部教案')
+                      .schemaType('lesson')
+                      .child(
+                        S.documentTypeList('lesson')
+                          .id('allLessonList')
+                          .title('全部教案')
+                          .defaultOrdering([
+                            {field: 'academicYear', direction: 'desc'},
+                            {field: 'date', direction: 'desc'},
+                          ])
+                      ),
+                    ...yearItems,
                   ])
               ),
             S.listItem()
