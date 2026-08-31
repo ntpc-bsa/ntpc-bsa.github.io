@@ -28,6 +28,10 @@ defaults:
     values:
       layout: "lesson"
 
+# 以底線開頭的檔案 Jekyll 預設會跳過，這份要跟著進 _site 才會生效
+include:
+  - _redirects
+
 # Exclude from processing
 exclude:
   - Gemfile

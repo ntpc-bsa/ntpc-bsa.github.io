@@ -1,0 +1,6 @@
+# Cloudflare Pages 轉址規則。
+# 檔名以底線開頭，Jekyll 預設會忽略，所以 _config.yml 用 include 把它帶進 _site。
+
+# /admin 直接進後台，方便承辦人記憶，不必另外收藏 sanity.studio 的網址
+/admin      https://ntpc-bsa.sanity.studio/          302
+/admin/*    https://ntpc-bsa.sanity.studio/:splat    302
