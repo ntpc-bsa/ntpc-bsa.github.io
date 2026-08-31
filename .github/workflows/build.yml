@@ -39,6 +39,9 @@ jobs:
           SANITY_DATASET: production
         run: node scripts/build-lessons.mjs
 
+      - name: 檢查 Liquid 標籤配對
+        run: node scripts/check-liquid.mjs
+
       - run: bundle exec jekyll build
 
       - name: 檢查產出

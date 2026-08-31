@@ -7,9 +7,10 @@
   "scripts": {
     "lessons": "node scripts/build-lessons.mjs",
     "build": "node scripts/build-lessons.mjs && bundle exec jekyll build",
-    "verify": "node scripts/verify-roundtrip.mjs && node scripts/verify-build.mjs",
+    "verify": "node scripts/check-liquid.mjs && node scripts/verify-roundtrip.mjs && node scripts/verify-build.mjs",
     "migrate:dry": "node scripts/migrate-to-sanity.mjs --dry-run",
-    "migrate": "node scripts/migrate-to-sanity.mjs"
+    "migrate": "node scripts/migrate-to-sanity.mjs",
+    "liquid": "node scripts/check-liquid.mjs"
   },
   "dependencies": {
     "@portabletext/to-html": "^2.0.13",
