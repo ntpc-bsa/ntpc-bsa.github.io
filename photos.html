@@ -18,102 +18,21 @@ permalink: /photos/
         <!-- 照片輪播展示區域 -->
         <div class="photo-carousel-container">
             <div class="photo-carousel-wrapper">
-                <!-- 輪播照片範例 - 請將您的照片放在 assets/images/carousel/ 資料夾中 -->
-                <!-- 
-                範例格式：
+                {%- comment -%}
+                照片來自後台的「活動照片」，由 scripts/build-lessons.mjs 寫進 _data/photos.yml。
+                要增刪或調整順序請到後台，不要改這裡。
+                {%- endcomment -%}
+                {% for slide in site.data.photos.slides %}
                 <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/您的照片檔案.jpg' | relative_url }}" alt="照片描述">
+                    <img src="{{ slide.image }}" alt="{{ slide.alt }}" loading="lazy">
+                    {% if slide.caption %}
                     <div class="photo-carousel-caption">
-                        <h3>照片標題</h3>
-                        <p>照片描述</p>
+                        <h3>{{ slide.caption }}</h3>
+                        {% if slide.caption_text %}<p>{{ slide.caption_text }}</p>{% endif %}
                     </div>
+                    {% endif %}
                 </div>
-                -->
-                
-                <!-- 使用您上傳的新照片 -->
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05748.jpg' | relative_url }}" alt="雙語教學活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05754.jpg' | relative_url }}" alt="國際交流活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05843.jpg' | relative_url }}" alt="教師研習活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05869.jpg' | relative_url }}" alt="學生成果展示">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05917.jpg' | relative_url }}" alt="外師教學">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05928.jpg' | relative_url }}" alt="雙語課程活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC05955.jpg' | relative_url }}" alt="國際志工服務">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06018.jpg' | relative_url }}" alt="雙語教學成果">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06086.jpg' | relative_url }}" alt="學校特色活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06161.jpg' | relative_url }}" alt="國際文化交流">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06273.jpg' | relative_url }}" alt="雙語教學研習">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06363.jpg' | relative_url }}" alt="學生學習活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06422.jpg' | relative_url }}" alt="教學成果展示">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06433.jpg' | relative_url }}" alt="國際教育活動">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC06450.jpg' | relative_url }}" alt="雙語教學實踐">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07585.jpg' | relative_url }}" alt="教師專業發展">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07650.jpg' | relative_url }}" alt="學生國際視野">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07683.jpg' | relative_url }}" alt="雙語課程創新">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07726.jpg' | relative_url }}" alt="國際合作交流">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07779.jpg' | relative_url }}" alt="雙語教學成果展">
-                </div>
-                
-                <div class="photo-carousel-slide">
-                    <img src="{{ '/assets/images/carousel/DSC07836.jpg' | relative_url }}" alt="國際教育推廣">
-                </div>
+                {% endfor %}
             </div>
             
             <!-- 輪播控制按鈕 -->

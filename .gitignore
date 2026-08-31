@@ -37,6 +37,7 @@ node_modules/
 _lessons/
 _data/years.yml
 _data/homepage.yml
+_data/photos.yml
 lessons-1*.html
 node_modules/
 .env

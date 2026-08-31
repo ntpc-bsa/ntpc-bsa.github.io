@@ -14,6 +14,7 @@
               │     Sanity ──▶ _lessons/<學年度>/<代稱>.md
               │              ▶ _data/years.yml     （導覽選單的學年度清單）
               │              ▶ _data/homepage.yml  （首頁焦點新聞）
+              │              ▶ _data/photos.yml    （活動照片輪播）
               │              ▶ lessons-<學年度>.html（各年度列表頁）
               │
               └─ bundle exec jekyll build ──▶ _site
@@ -21,11 +22,12 @@
         Cloudflare Pages CDN
 ```
 
-來自 Sanity 的有兩塊：`/lessons/` 全部，以及首頁的「焦點新聞」區塊。
-關於聯盟、活動照片、聯絡我們仍是版控裡的靜態檔案，改那些頁面還是改 repo。
+來自 Sanity 的有三塊：`/lessons/` 全部、首頁的「焦點新聞」區塊、活動照片頁的輪播。
+關於聯盟與聯絡我們仍是版控裡的靜態檔案，改那些頁面還是改 repo。
 
 圖片全部存在 Sanity，透過 `cdn.sanity.io` 提供，並在網址帶上尺寸參數自動壓縮成 WebP。
-`assets/images/lessons/` 在搬遷完成後就不再被網站使用（保留當備份即可）。
+`assets/images/` 底下只剩 logo 與 about／contact 兩頁用的幾張圖，
+教案與活動照片的原始檔已從版控移除（仍可在 main 分支的歷史與 `_backup/` 取得）。
 
 ## 產生的檔案不要手動改
 
@@ -33,7 +35,7 @@
 
 - `_lessons/**/*.md` — 前置資料含 `generated: true`
 - `lessons-<學年度>.html` — 檔頭有「請勿手動編輯」註解
-- `_data/years.yml`、`_data/homepage.yml`
+- `_data/years.yml`、`_data/homepage.yml`、`_data/photos.yml`
 
 年度頁的版型改 `_templates/year-page.html`（這份才是版控裡的來源）。
 

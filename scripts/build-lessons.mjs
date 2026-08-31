@@ -21,6 +21,8 @@ const GENERATED_HTML = '此檔由 scripts/build-lessons.mjs'
 
 await loadDotEnv()
 
+const PHOTOS_QUERY = `*[_type == "photos"][0]{ slides }`
+
 const HOMEPAGE_QUERY = `*[_type == "homepage"][0]{
   featuredImage, featuredTitle, featuredSubtitle, featuredText, featuredUrl, featuredLinkLabel
 }`
@@ -39,6 +41,8 @@ const urls = {
   content: (img) => imageUrl(img).width(1600).auto('format').url(),
   // 首頁焦點新聞的大圖
   featured: (img) => imageUrl(img).width(1200).height(800).fit('crop').auto('format').url(),
+  // 活動照片輪播
+  photo: (img) => imageUrl(img).width(1600).auto('format').url(),
 }
 
 // -------------------------------------------------------------- 清理舊產出
@@ -168,6 +172,31 @@ if (homepage?.featuredTitle && homepage?.featuredImage) {
   console.warn('提醒：後台的「首頁設定」還沒填，首頁的焦點新聞區塊不會顯示')
 }
 
+// 活動照片輪播
+const photos = await client.fetch(PHOTOS_QUERY).catch(() => null)
+const photosPath = path.join(DATA_DIR, 'photos.yml')
+if (photos?.slides?.length) {
+  const y = (v) => JSON.stringify(String(v ?? '').replace(/\s*\n\s*/g, ' '))
+  await writeFile(
+    photosPath,
+    '# 此檔由 scripts/build-lessons.mjs 自動產生，請勿手動編輯\n' +
+      'slides:\n' +
+      photos.slides
+        .map(
+          (sl) =>
+            `  - image: ${y(urls.photo(sl))}\n` +
+            `    alt: ${y(sl.alt || '活動照片')}\n` +
+            (sl.caption ? `    caption: ${y(sl.caption)}\n` : '') +
+            (sl.captionText ? `    caption_text: ${y(sl.captionText)}\n` : '')
+        )
+        .join(''),
+    'utf8'
+  )
+} else {
+  await rm(photosPath, {force: true})
+  console.warn('提醒：後台的「活動照片」還沒填，活動照片頁的輪播不會顯示')
+}
+
 // 各學年度列表頁
 const template = await readFile(TEMPLATE, 'utf8')
 for (const [year] of sortedYears) {
@@ -176,6 +205,7 @@ for (const [year] of sortedYears) {
 
 console.log(`\n已從 Sanity 取得 ${lessons.length} 篇教案（清掉 ${removed} 個上次產生的檔案）`)
 if (homepage?.featuredTitle) console.log(`  首頁焦點新聞：${homepage.featuredTitle}`)
+if (photos?.slides?.length) console.log(`  活動照片：${photos.slides.length} 張`)
 for (const [year, count] of sortedYears) {
   console.log(`  ${year} 學年度：${count} 篇  →  /lessons/${year}/`)
 }

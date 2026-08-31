@@ -115,6 +115,17 @@ export default defineConfig({
                   ])
               ),
             S.listItem()
+              .id('photos')
+              .title('活動照片')
+              .schemaType('photos')
+              .child(
+                S.document()
+                  .id('photosDoc')
+                  .schemaType('photos')
+                  .documentId('photos')
+                  .title('活動照片')
+              ),
+            S.listItem()
               .id('homepage')
               .title('首頁設定')
               .schemaType('homepage')
