@@ -1,7 +1,7 @@
 title: 新北市雙語策略聯盟
 description: NEW TAIPEI CITY BILINGUAL STRATEGIC ALLIANCE
 baseurl: ""
-url: "https://ntpc-bsa.github.io"
+url: "https://ntpc-bsa.pages.dev"
 
 # Build settings
 markdown: kramdown
@@ -57,4 +57,7 @@ exclude:
   - ADMIN_GUIDE.md
   - ADOBE_FONTS_SETUP.md
   - PHOTO_CAROUSEL_GUIDE.md
-  - PHOTO_UPLOAD_INSTRUCTIONS.md 
+  - PHOTO_UPLOAD_INSTRUCTIONS.md
+  # 教案圖片已全部搬到 Sanity，改由 cdn.sanity.io 提供。
+  # 這批檔案留在版控當備份，但不需要跟著部署（約 100MB）。
+  - assets/images/lessons/ 
