@@ -49,6 +49,3 @@ exclude:
   - .env
   - .env.example
   - README.md
-  - DEPLOY.md
-  - ADMIN_GUIDE.md
-  - ADOBE_FONTS_SETUP.md

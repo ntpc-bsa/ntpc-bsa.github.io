@@ -24,9 +24,34 @@ async function collect(dir, out = []) {
   return out
 }
 
+/**
+ * 決定要不要檢查這個檔案，以及要拿去檢查的內容。
+ *
+ * Jekyll 只有在檔案帶 YAML front matter 時才會跑 Liquid（_includes 與
+ * _layouts 例外，那些一定會被處理）。像 README 這種純說明文件不會被處理，
+ * 裡面寫到的 {% raw %}{% endif %}{% endraw %} 只是說明文字，不該當成語法錯誤。
+ * markdown 的程式碼區塊同理，先拿掉再檢查。
+ */
+function prepare(file, text) {
+  const isTemplate = file.includes('_includes') || file.includes('_layouts')
+  const hasFrontMatter = text.startsWith('---')
+  if (!isTemplate && !hasFrontMatter) return null
+
+  if (file.endsWith('.md')) {
+    return text
+      .replace(/```[\s\S]*?```/g, '')   // 圍欄程式碼區塊
+      .replace(/`[^`\n]*`/g, '')        // 行內程式碼
+  }
+  return text
+}
+
 let failed = 0
+let checked = 0
 for (const file of await collect('.')) {
-  const text = await readFile(file, 'utf8')
+  const raw = await readFile(file, 'utf8')
+  const text = prepare(file, raw)
+  if (text === null) continue
+  checked += 1
   const stack = []
   let bad = null
   for (const m of text.matchAll(/\{%-?\s*(\w+)/g)) {
