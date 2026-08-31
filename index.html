@@ -82,27 +82,37 @@ title: 首頁
 </section>
 
 <!-- 焦點新聞區塊 -->
+{%- comment -%}
+內容來自後台的「首頁設定」，由 scripts/build-lessons.mjs 寫進 _data/homepage.yml。
+後台還沒填的話這整個區塊就不會出現。
+{%- endcomment -%}
+{% if site.data.homepage.featured %}
+{% assign featured = site.data.homepage.featured %}
 <section class="news-section">
     <div class="section-container">
         <div class="section-title">
             <h2>焦點新聞 <span class="title-en">NEWS</span></h2>
         </div>
-        
-        <!-- 焦點新聞內容 -->
+
         <div class="featured-news">
             <div class="featured-image">
-                <img src="{{ '/assets/images/carousel/DSC07726.jpg' | relative_url }}" alt="新北市雙語策略聯盟成果展" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="{{ featured.image }}" alt="{{ featured.title }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="featured-content">
-                <h3 class="featured-title">新北雙語策略聯盟成果展登場</h3>
-                <h4 class="featured-subtitle">13校67件創新教案、10堂公開課 展現雙語教育跨域實力</h4>
+                <h3 class="featured-title">{{ featured.title }}</h3>
+                {% if featured.subtitle %}
+                <h4 class="featured-subtitle">{{ featured.subtitle }}</h4>
+                {% endif %}
                 <p class="featured-text">
-                    新北市雙語策略聯盟成果展展出67件創新教案與10堂動態課程，結合科技與跨校合作，強化學生英語表達、跨文化理解與國際素養，展現2030雙語政策的推動成果與教育前瞻性。
+                    {{ featured.text }}
                 </p>
-                <a href="https://www.ntpc.edu.tw/home.jsp?id=d127e0ce0f4f407b&act=be4f48068b2b0031&dataserno=85d9061c2f71e7814e79c6bacd345901&mserno=cdfca8f4e3eeb6df81e43a5af771c42f" class="featured-btn" target="_blank">
-                    了解更多
+                {% if featured.url %}
+                <a href="{{ featured.url }}" class="featured-btn" target="_blank" rel="noopener">
+                    {{ featured.link_label | default: "了解更多" }}
                 </a>
+                {% endif %}
             </div>
         </div>
     </div>
 </section>
+{% endif %}

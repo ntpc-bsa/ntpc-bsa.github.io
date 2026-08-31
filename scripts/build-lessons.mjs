@@ -21,6 +21,10 @@ const GENERATED_HTML = '此檔由 scripts/build-lessons.mjs'
 
 await loadDotEnv()
 
+const HOMEPAGE_QUERY = `*[_type == "homepage"][0]{
+  featuredImage, featuredTitle, featuredSubtitle, featuredText, featuredUrl, featuredLinkLabel
+}`
+
 const QUERY = `*[_type == "lesson" && defined(slug.current)] | order(academicYear desc, date desc) {
   _id, title, "slug": slug.current, academicYear, school, subject, grade, author,
   date, excerpt, tags, resourceUrl, resourceLabel, contentHeading, coverImage, intro, content
@@ -33,6 +37,8 @@ const urls = {
   cover: (img) => imageUrl(img).width(800).height(600).fit('crop').auto('format').url(),
   // 教案內頁的大圖
   content: (img) => imageUrl(img).width(1600).auto('format').url(),
+  // 首頁焦點新聞的大圖
+  featured: (img) => imageUrl(img).width(1200).height(800).fit('crop').auto('format').url(),
 }
 
 // -------------------------------------------------------------- 清理舊產出
@@ -140,6 +146,28 @@ await writeFile(
   'utf8'
 )
 
+// 首頁的焦點新聞。後台還沒填就把資料檔清掉，版型會自動略過那個區塊。
+const homepage = await client.fetch(HOMEPAGE_QUERY).catch(() => null)
+const homepagePath = path.join(DATA_DIR, 'homepage.yml')
+if (homepage?.featuredTitle && homepage?.featuredImage) {
+  const y = (v) => JSON.stringify(String(v ?? '').replace(/\s*\n\s*/g, ' '))
+  await writeFile(
+    homepagePath,
+    '# 此檔由 scripts/build-lessons.mjs 自動產生，請勿手動編輯\n' +
+      'featured:\n' +
+      `  image: ${y(urls.featured(homepage.featuredImage))}\n` +
+      `  title: ${y(homepage.featuredTitle)}\n` +
+      (homepage.featuredSubtitle ? `  subtitle: ${y(homepage.featuredSubtitle)}\n` : '') +
+      `  text: ${y(homepage.featuredText)}\n` +
+      (homepage.featuredUrl ? `  url: ${y(homepage.featuredUrl)}\n` : '') +
+      `  link_label: ${y(homepage.featuredLinkLabel || '了解更多')}\n`,
+    'utf8'
+  )
+} else {
+  await rm(homepagePath, {force: true})
+  console.warn('提醒：後台的「首頁設定」還沒填，首頁的焦點新聞區塊不會顯示')
+}
+
 // 各學年度列表頁
 const template = await readFile(TEMPLATE, 'utf8')
 for (const [year] of sortedYears) {
@@ -147,6 +175,7 @@ for (const [year] of sortedYears) {
 }
 
 console.log(`\n已從 Sanity 取得 ${lessons.length} 篇教案（清掉 ${removed} 個上次產生的檔案）`)
+if (homepage?.featuredTitle) console.log(`  首頁焦點新聞：${homepage.featuredTitle}`)
 for (const [year, count] of sortedYears) {
   console.log(`  ${year} 學年度：${count} 篇  →  /lessons/${year}/`)
 }

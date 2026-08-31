@@ -36,6 +36,7 @@ node_modules/
 # 教案內容與年度頁改由 scripts/build-lessons.mjs 從 Sanity 產生，不進版控
 _lessons/
 _data/years.yml
+_data/homepage.yml
 lessons-1*.html
 node_modules/
 .env

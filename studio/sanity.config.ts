@@ -36,6 +36,19 @@ export default defineConfig({
                     {field: 'date', direction: 'desc'},
                   ])
               ),
+            S.divider(),
+            // 首頁設定固定編輯同一份文件，所以直接開那份，不做成清單
+            S.listItem()
+              .id('homepage')
+              .title('首頁設定')
+              .schemaType('homepage')
+              .child(
+                S.document()
+                  .id('homepageDoc')
+                  .schemaType('homepage')
+                  .documentId('homepage')
+                  .title('首頁設定')
+              ),
           ]),
     }),
     visionTool(),
